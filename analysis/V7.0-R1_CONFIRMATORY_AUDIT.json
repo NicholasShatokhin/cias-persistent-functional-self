@@ -1,0 +1,155 @@
+{
+  "release_version": "7.0-r1",
+  "frozen_benchmark_protocol": "7.0-p2",
+  "preflight": {
+    "rows": 48,
+    "expected": 48,
+    "passed": true
+  },
+  "heldout": {
+    "rows": 360,
+    "expected": 360,
+    "seed_first": 277,
+    "seed_last": 306,
+    "seed_count": 30,
+    "profiles": [
+      "drone",
+      "ground_creature",
+      "virtual_avatar",
+      "wheeled_robot"
+    ],
+    "conditions": [
+      "progressive_history_reset",
+      "progressive_no_persistent_self",
+      "progressive_persistent"
+    ],
+    "duplicates": 0,
+    "missing_values": 0,
+    "matched_change_points": [
+      4
+    ]
+  },
+  "nondegeneracy": {
+    "full_mean": 0.6966996548648688,
+    "floor_fraction": 0.0,
+    "ceiling_fraction": 0.0,
+    "passed": true
+  },
+  "primary": {
+    "identity_continuity": {
+      "metric": "identity_continuity_score_v2",
+      "control": "progressive_no_persistent_self",
+      "effect": 0.38807139466963797,
+      "ci95_low": 0.33621836145826056,
+      "ci95_high": 0.4399244278810154,
+      "cohen_dz": 2.7945952492152784,
+      "seed_win_rate": 0.9333333333333333,
+      "seed_tie_rate": 0.0,
+      "body_wins": 4,
+      "effect_drone": 0.36810544092003966,
+      "effect_ground_creature": 0.41029805109181466,
+      "effect_virtual_avatar": 0.394437725564414,
+      "effect_wheeled_robot": 0.37944436110228363
+    },
+    "old_appearance_lure_rejection": {
+      "metric": "final_old_signature_clone_capture",
+      "control": "progressive_no_persistent_self",
+      "effect": 0.8194444444444422,
+      "ci95_low": 0.7416693847782134,
+      "ci95_high": 0.897219504110671,
+      "cohen_dz": 3.9342378598103536,
+      "seed_win_rate": 0.9666666666666667,
+      "seed_tie_rate": 0.03333333333333333,
+      "body_wins": 4,
+      "effect_drone": 0.7944444444444424,
+      "effect_ground_creature": 0.8277777777777757,
+      "effect_virtual_avatar": 0.8555555555555533,
+      "effect_wheeled_robot": 0.7999999999999979
+    }
+  },
+  "secondary": {
+    "retention": {
+      "metric": "final_identity_retention",
+      "control": "progressive_no_persistent_self",
+      "effect": 0.568171296296295,
+      "ci95_low": 0.4745974257096121,
+      "ci95_high": 0.661745166882978,
+      "cohen_dz": 2.2672851666460274,
+      "seed_win_rate": 0.9333333333333333,
+      "seed_tie_rate": 0.0,
+      "body_wins": 4,
+      "effect_drone": 0.53148148148148,
+      "effect_ground_creature": 0.6097222222222213,
+      "effect_virtual_avatar": 0.5745370370370356,
+      "effect_wheeled_robot": 0.5569444444444434
+    },
+    "recovery_latency": {
+      "metric": "final_identity_recovery_latency",
+      "control": "progressive_no_persistent_self",
+      "effect": 3.7466666666666666,
+      "ci95_low": 3.146348078868284,
+      "ci95_high": 4.346985254465049,
+      "cohen_dz": 2.3304764406032557,
+      "seed_win_rate": 0.9333333333333333,
+      "seed_tie_rate": 0.06666666666666667,
+      "body_wins": 4,
+      "effect_drone": 3.4933333333333336,
+      "effect_ground_creature": 4.133333333333334,
+      "effect_virtual_avatar": 3.68,
+      "effect_wheeled_robot": 3.68
+    },
+    "posterior_margin": {
+      "metric": "final_self_posterior_margin",
+      "control": "progressive_no_persistent_self",
+      "effect": 0.011113776416145249,
+      "ci95_low": 0.007039367402519795,
+      "ci95_high": 0.015188185429770703,
+      "cohen_dz": 1.0185409227370144,
+      "seed_win_rate": 0.9,
+      "seed_tie_rate": 0.0,
+      "body_wins": 4,
+      "effect_drone": 0.01130984944572066,
+      "effect_ground_creature": 0.011560554393055006,
+      "effect_virtual_avatar": 0.011054054690297332,
+      "effect_wheeled_robot": 0.010530647135507994
+    },
+    "history_reset_continuity": {
+      "metric": "identity_continuity_score_v2",
+      "control": "progressive_history_reset",
+      "effect": -0.057282313676650494,
+      "ci95_low": -0.08270844694964391,
+      "ci95_high": -0.031856180403657085,
+      "cohen_dz": -0.8412434256089913,
+      "seed_win_rate": 0.3,
+      "seed_tie_rate": 0.0,
+      "body_wins": 0,
+      "effect_drone": -0.06060673561297434,
+      "effect_ground_creature": -0.063230170851122,
+      "effect_virtual_avatar": -0.06930258013085831,
+      "effect_wheeled_robot": -0.03598976811164733
+    },
+    "history_reset_lure_rejection": {
+      "metric": "final_old_signature_clone_capture",
+      "control": "progressive_history_reset",
+      "effect": 0.04027777777777857,
+      "ci95_low": 0.02271163711236371,
+      "ci95_high": 0.057843918443193434,
+      "cohen_dz": 0.8561908778752421,
+      "seed_win_rate": 0.6333333333333333,
+      "seed_tie_rate": 0.3,
+      "body_wins": 4,
+      "effect_drone": 0.02777777777777833,
+      "effect_ground_creature": 0.04444444444444533,
+      "effect_virtual_avatar": 0.03888888888888966,
+      "effect_wheeled_robot": 0.050000000000001
+    }
+  },
+  "confirmatory_pass": true,
+  "claim_supported": "The persistent causal identity anchor is necessary for robust functional Self continuity under the frozen adversarial morphology/appearance change task.",
+  "claim_boundaries": [
+    "Does not establish phenomenal consciousness or qualia.",
+    "Does not show that retaining all association history is beneficial.",
+    "Does not support a special benefit of progressive morphology order.",
+    "Does not yet establish indefinite long-horizon autobiographical identity."
+  ]
+}

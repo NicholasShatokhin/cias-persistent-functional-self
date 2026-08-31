@@ -1,0 +1,10 @@
+{
+  "actual_runs": 48,
+  "errors": [],
+  "expected_runs": 48,
+  "frozen_benchmark_protocol": "7.0-p2",
+  "heldout_opened": false,
+  "passed": true,
+  "release_version": "7.0-r1",
+  "status": "preflight"
+}

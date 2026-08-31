@@ -1,0 +1,6 @@
+{
+  "ontology_core_sha256": "baa0bfe03eb13c14a8df559442c05fda49519fae374c744c88950710b19eb3ce",
+  "benchmark_sha256": "d1055bb90b3979c52a4a4e231777359a0703559c93c1d38289e4294c1d258d0b",
+  "source_release": "v7.0-p2",
+  "scientific_behavior_changes": "NONE"
+}

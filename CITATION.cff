@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "Replication package for A Causal Theory of Persistent Functional Self in Embodied Artificial Agents"
+message: "Please cite the associated paper when using this package."
+type: software
+authors:
+  - family-names: Shatokhin
+    given-names: Mykola
+    orcid: "https://orcid.org/0000-0003-0028-6208"
