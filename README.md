@@ -1,10 +1,11 @@
 # Replication Package for *A Causal Theory of Persistent Functional Self in Embodied Artificial Agents*
 
-[![DOI](https://zenodo.org/badge/DOI/PENDING.svg)](https://zenodo.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22207678.svg)](https://doi.org/10.5281/zenodo.22207678)
 
 **Author:** Mykola Shatokhin  
 **ORCID:** https://orcid.org/0000-0003-0028-6208  
-**Repository:** https://github.com/NicholasShatokhin/cias-persistent-functional-self
+**Repository:** https://github.com/NicholasShatokhin/cias-persistent-functional-self  
+**Archived release:** https://doi.org/10.5281/zenodo.22207678
 
 This repository contains the frozen materials required to audit and reproduce the narrow claims reported in:
 
@@ -88,7 +89,7 @@ To verify the release archive after downloading it, compare its SHA-256 with the
 
 GitHub will display citation metadata from [`CITATION.cff`](CITATION.cff).
 
-For release `v1.0.0`, cite the archived Zenodo record once the DOI is minted. The associated article is **"A Causal Theory of Persistent Functional Self in Embodied Artificial Agents"**. Its public preprint/journal citation will be added here when available.
+For release `v1.0.0`, cite the archived Zenodo record: **10.5281/zenodo.22207678** (https://doi.org/10.5281/zenodo.22207678). The associated article is **"A Causal Theory of Persistent Functional Self in Embodied Artificial Agents"**. Its public preprint/journal citation will be added here when available.
 
 ## Licensing
 

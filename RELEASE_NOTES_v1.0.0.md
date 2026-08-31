@@ -41,3 +41,7 @@ python analysis/analyze_v70r1.py \
 ## Scope
 
 This repository supports claims about persistent **functional** identity in simulated embodied artificial agents. It does not claim phenomenal consciousness or human-like selfhood.
+
+## Archival DOI
+
+Zenodo archive: **10.5281/zenodo.22207678** — https://doi.org/10.5281/zenodo.22207678

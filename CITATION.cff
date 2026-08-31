@@ -3,9 +3,14 @@ message: "If you use this replication package, please cite this software release
 title: "Replication Package for A Causal Theory of Persistent Functional Self in Embodied Artificial Agents"
 type: software
 version: 1.0.0
+doi: "10.5281/zenodo.22207678"
 date-released: "2026-08-31"
 repository-code: "https://github.com/NicholasShatokhin/cias-persistent-functional-self"
 url: "https://github.com/NicholasShatokhin/cias-persistent-functional-self"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22207678"
+    description: "Zenodo archive of release v1.0.0"
 abstract: >-
   Frozen code, scientific protocols, raw diagnostic and confirmatory data,
   analysis scripts, and provenance records associated with
