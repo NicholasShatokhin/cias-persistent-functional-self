@@ -103,6 +103,6 @@ Frame-level `parameter_sensitivity_tracking.csv` (~323 MB) зберігаєть�
 
 Точні версії Python-пакетів еталонного запуску збережені в `reference_environment/requirements-reference.txt`; діапазони в `requirements.txt` залишені для майбутніх compatible reruns.
 
-Перед фінальним submit цей стан репозиторію треба опублікувати як нову immutable Zenodo version. Метадані лежать у `.zenodo.json`, а послідовність дій — у `release/ZENODO_PUBLISH_CHECKLIST.md`.
+Повний повторний запуск заархівовано в Zenodo під DOI 10.5281/zenodo.22253924. Попередній DOI 10.5281/zenodo.22207678 залишається незмінним історичним знімком попередньої версії.
 
 Ліцензування й citation metadata: `LICENSE` та `CITATION.cff`.
