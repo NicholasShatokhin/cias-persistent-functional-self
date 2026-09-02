@@ -31,9 +31,9 @@ None. All reported experiments are simulations.
 ## Data and code
 Public reproducibility repository: https://github.com/NicholasShatokhin/cias-persistent-functional-self
 
-Earlier archived snapshot: https://doi.org/10.5281/zenodo.22207678
+Current complete-rerun archive (reserved version DOI): https://doi.org/10.5281/zenodo.22253924
 
-A new Zenodo version should be minted for the complete rerun before final submission; replace the archived-release DOI in submission metadata with that version DOI when available.
+Earlier archived snapshot: https://doi.org/10.5281/zenodo.22207678
 
 ## AI-assisted content
 The manuscript contains an explicit IEEE-policy disclosure in the Acknowledgment. OpenAI ChatGPT (GPT-5.6 Sol) assisted with drafting/restructuring prose and generation/review of portions of experimental and analysis code. The sole author executed and verified the experiments, data, literature, mathematical claims, and final manuscript and takes full responsibility for the content.
@@ -41,4 +41,4 @@ The manuscript contains an explicit IEEE-policy disclosure in the Acknowledgment
 
 ## Reproducibility release
 
-Before final submission, replace `ZENODO-CURRENT-RELEASE-DOI` with the new immutable Zenodo version DOI for the complete rerun release. The earlier DOI `10.5281/zenodo.22207678` remains a historical preceding snapshot.
+Current complete-rerun Zenodo DOI: `10.5281/zenodo.22253924`. Publish the prepared Zenodo draft before final journal submission so that the DOI resolves publicly. The earlier DOI `10.5281/zenodo.22207678` remains a historical preceding snapshot.

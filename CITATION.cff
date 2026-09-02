@@ -10,6 +10,7 @@ authors:
 repository-code: "https://github.com/NicholasShatokhin/cias-persistent-functional-self"
 url: "https://github.com/NicholasShatokhin/cias-persistent-functional-self"
 version: "1.1.0"
+doi: "10.5281/zenodo.22253924"
 date-released: "2026-09-02"
 license: MIT
 keywords:

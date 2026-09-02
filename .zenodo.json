@@ -1,33 +1,23 @@
 {
-  "title": "Persistent Functional Self: complete reproducibility package for A Causal Theory of Persistent Functional Self in Embodied Artificial Agents",
+  "title": "Reproducibility Package v1.1.0 — A Causal Theory of Persistent Functional Self in Embodied Artificial Agents",
   "upload_type": "software",
-  "description": "Executable Godot/Python reproducibility package, protocols, complete reference execution, independent recurrent-estimator comparison, parameter-sensitivity experiment, analysis scripts, provenance, and manuscript sources for the complete rerun of the persistent functional Self study. The repository uses mixed licensing: software under MIT, reference data under CC BY 4.0, and manuscript copyright retained by the author; see LICENSE.",
+  "description": "Complete reproducibility package for the study ‘A Causal Theory of Persistent Functional Self in Embodied Artificial Agents’. This release contains the executable Godot/Python code, scientific protocols, complete reference execution, independent recurrent-estimator comparison, 27-setting parameter-sensitivity experiment, analysis scripts, exact reference environment, provenance records, SHA-256 manifests, and manuscript sources used for the current results.\n\nThe study evaluates persistent functional identity in embodied artificial agents under adversarial morphology and appearance change. The complete rerun reproduces a strong within-CIAS effect of the persistent identity anchor. A separate generic recurrent estimator shows that the benchmark does not uniquely require an explicit Self variable, supporting a broader mechanism based on causal individuation, embodied closure, and persistent cross-time state. The parameter-sensitivity analysis identifies a substantial operating basin together with explicit failure regions.\n\nThe repository is directly executable with Godot 4.7 stable and Python; see README.md for one-command reproduction instructions. The preceding Zenodo DOI 10.5281/zenodo.22207678 is preserved as the earlier confirmatory snapshot.\n\nLicensing: software is released under the MIT License; reference data and documentation are released under CC BY 4.0; manuscript copyright is retained by the author. See LICENSE for details.",
   "creators": [
     {
       "name": "Shatokhin, Mykola",
-      "affiliation": "National University Kyiv Aviation Institute",
+      "affiliation": "National University “Kyiv Aviation Institute”, Kyiv, Ukraine",
       "orcid": "0000-0003-0028-6208"
     }
   ],
   "keywords": [
-    "embodied AI",
-    "artificial self",
-    "persistent identity",
-    "causal inference",
-    "cognitive robotics",
+    "persistent functional self",
+    "embodied artificial agents",
+    "causal identity",
+    "sensorimotor continuity",
+    "self-modeling",
+    "recurrent state estimation",
+    "adversarial embodiment change",
     "reproducibility"
-  ],
-  "related_identifiers": [
-    {
-      "identifier": "10.5281/zenodo.22207678",
-      "relation": "isNewVersionOf",
-      "resource_type": "software"
-    },
-    {
-      "identifier": "https://github.com/NicholasShatokhin/cias-persistent-functional-self",
-      "relation": "isSupplementTo",
-      "resource_type": "software"
-    }
   ],
   "version": "1.1.0",
   "publication_date": "2026-09-02"

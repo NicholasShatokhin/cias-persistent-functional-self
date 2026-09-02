@@ -7,8 +7,8 @@
     },
     {
       "path": ".zenodo.json",
-      "sha256": "ae3dfeb24aea2076df48fd46ec96e2ae9fe7b5d185bb4eec43dcb09d85b8a95b",
-      "bytes": 1372
+      "sha256": "94e100a4d73cc4d04bf5887023ea02bab28230a8e5e98f93ee41f552fc7c5064",
+      "bytes": 2153
     },
     {
       "path": "CHANGELOG.md",
@@ -17,8 +17,8 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "1bff8b77fd7f627196ce4c5740f2ab4e468c23f5dd661fa633fb1bb10bcd986f",
-      "bytes": 788
+      "sha256": "43d3025a59977f0700dd331758b1e4bb8b1c1bb8136a2ea6c9a9da1a7c2fb767",
+      "bytes": 819
     },
     {
       "path": "LICENSE",
@@ -27,13 +27,13 @@
     },
     {
       "path": "QA_REPORT.md",
-      "sha256": "d186f4b915b363d6e8889c8413cb5303502eddc79e3f5b1bc41bafcf3090c847",
-      "bytes": 2466
+      "sha256": "13fb74d8ddab5aa166b99076fad8946dd6b53182dd88c189838b5e0f10c7d95f",
+      "bytes": 2618
     },
     {
       "path": "README.md",
-      "sha256": "b553891359aad81e32a6ef01dccf3014949293a70e049c5f23cb0de7e724f47e",
-      "bytes": 7531
+      "sha256": "8a5a640b133679050bc93b999b22c2a17cfe5ab376df79b45dad0c8e01cf4f50",
+      "bytes": 7712
     },
     {
       "path": "README_UA.md",
@@ -227,8 +227,8 @@
     },
     {
       "path": "paper/README.md",
-      "sha256": "17298aa2fc4c68b02cd94bdc69a82e878e26792177347a618a3da0eb3fb50737",
-      "bytes": 623
+      "sha256": "2398175adf5c441f35e91dfb2d92b6afc5408387282221db2059983085e0b800",
+      "bytes": 617
     },
     {
       "path": "paper/manuscript/BUILD.md",
@@ -247,8 +247,8 @@
     },
     {
       "path": "paper/manuscript/SCHOLARONE_METADATA.md",
-      "sha256": "2a6b329af740ce998d80aedb91987008c4e872172b6a35640e9f91b808d71f0c",
-      "bytes": 3689
+      "sha256": "d823e443af3e4dacb5917e7c4b277391758289ee577ad1be5c68c539eadbe378",
+      "bytes": 3631
     },
     {
       "path": "paper/manuscript/figures/confirmatory_effects_rerun.pdf",
@@ -277,28 +277,28 @@
     },
     {
       "path": "paper/manuscript/main.pdf",
-      "sha256": "08f898b5a272827fb256f4cb9b1f7686e787eb476ef40a6169451243d2318ab2",
-      "bytes": 331426
+      "sha256": "b50faf83484d416a6965b2fe8f62e46f52b69e38b9977249aee837419b680c44",
+      "bytes": 329209
     },
     {
       "path": "paper/manuscript/main.tex",
-      "sha256": "ccafd130b6c6fc40223ff752f92b7d754a3bd95576c8bbc1c2bba4eab0089986",
-      "bytes": 48955
+      "sha256": "b12ff294084ec581e458ab672dd235381207bd5b35b0af2d3fe6f6c0476c4f93",
+      "bytes": 48815
     },
     {
       "path": "paper/manuscript/references.bib",
-      "sha256": "ca558b137169fa502a5e0d42bccf3eb176a127ee9af12f2ed93ef2f0bcb89e4f",
-      "bytes": 8865
+      "sha256": "6bf4469d776c70cf7ef0f77ddc5410dc2ca84e7957249b8191bff4f6c1111736",
+      "bytes": 8926
     },
     {
       "path": "paper/manuscript/supplementary.pdf",
-      "sha256": "60ce455fe5b4567d0d6d25d86795202afbf5c00dc43de1cabc51cbb2a5d2dd52",
-      "bytes": 229053
+      "sha256": "44c8bee3471a5af7bc78bd4dee3527b1069d514cde56ccf8ea8d7f19c73c32bf",
+      "bytes": 227121
     },
     {
       "path": "paper/manuscript/supplementary.tex",
-      "sha256": "0a77ad88cbae43dea2d7b78a05fbe10e3d2669a1bf0c09b0f0731ea18035a6a6",
-      "bytes": 27537
+      "sha256": "966f149a2e942696d9e74a468c71a56ad6629138053c5371cfb928f21b737f22",
+      "bytes": 27470
     },
     {
       "path": "paper/pre_rerun_reference/README.md",
@@ -307,8 +307,8 @@
     },
     {
       "path": "paper/pre_rerun_reference/supplementary.tex",
-      "sha256": "e1b32f5426b10e9fb2bfcb86e3334262af80116d399dbe921115985307895570",
-      "bytes": 27483
+      "sha256": "7d11971f9763485ee01e7c963c1bf9bc720fac3d2b65205a9c9f14f21f012e21",
+      "bytes": 27480
     },
     {
       "path": "protocols/COMPLETE_EXPERIMENTAL_PROGRAM.md",
@@ -621,9 +621,14 @@
       "bytes": 135
     },
     {
+      "path": "release/ZENODO_METADATA_READY.md",
+      "sha256": "9cdfdadb04ead225fcfb1ba1ad6dda3ff5fac5bee110c9e3b7f6568c035df30a",
+      "bytes": 3760
+    },
+    {
       "path": "release/ZENODO_PUBLISH_CHECKLIST.md",
-      "sha256": "92a95ece02a8c195eb98dc2e25d07dc02ac5a09ea5c6a591df37260e91896fcc",
-      "bytes": 908
+      "sha256": "4c76187337968700b69452d118ab72f0b5b0435276d0763b06cb5fd8a6c4b1b3",
+      "bytes": 1937
     },
     {
       "path": "requirements.txt",
@@ -632,8 +637,8 @@
     },
     {
       "path": "tests/test_repository.py",
-      "sha256": "8031f612a54fa61209e2d7ab6b57bbba11232ae508e627de258ab6459a198697",
-      "bytes": 15530
+      "sha256": "f103880fe9d4421cb741cf831701dfe35e2649aee93cede12cda5b1a42da2094",
+      "bytes": 15556
     },
     {
       "path": "tools/build_manifest.py",

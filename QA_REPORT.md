@@ -40,5 +40,6 @@ The smoke tests do not open protected held-out seeds.
 ## Release metadata
 
 - `LICENSE`, `CITATION.cff`, `.zenodo.json`, exact reference environment and Zenodo publication checklist are present.
-- A new immutable Zenodo version has not been invented or assumed by this repository state. The manuscript source uses `ZENODO-CURRENT-RELEASE-DOI` until a DOI is assigned.
-- After Zenodo assigns the DOI, run `python tools/set_zenodo_doi.py <DOI>` and rebuild the manuscript PDFs before journal submission.
+- The complete-rerun release has reserved Zenodo DOI `10.5281/zenodo.22253924`, and the manuscript, bibliography and citation metadata already use that DOI.
+- The remaining archival action is publication of the prepared Zenodo draft and verification that the DOI resolves publicly.
+- Documentation audit: PASS. Release documentation is self-contained and written for external users. The manuscript AI-use statement is retained as formal publication metadata.

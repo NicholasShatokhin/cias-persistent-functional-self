@@ -150,7 +150,7 @@ The reference execution used Python `3.13.14` and Godot `4.7.stable.official.5b4
 
 The repository is intentionally usable with ordinary Git. `tools/verify_github_limits.py` checks that no file exceeds GitHub's 100 MB hard object limit. The only original output above that threshold, the frame-level parameter-sensitivity trace, is stored as `.csv.gz`; pandas can read it directly with `pandas.read_csv`.
 
-The complete rerun should also be archived as a new immutable Zenodo version. `.zenodo.json` contains release metadata and `release/ZENODO_PUBLISH_CHECKLIST.md` lists the final DOI-update steps. The preceding Zenodo DOI `10.5281/zenodo.22207678` remains a historical snapshot and should not be overwritten.
+The complete rerun has reserved Zenodo version DOI `10.5281/zenodo.22253924`. The Zenodo draft should contain the current repository archive, its SHA-256 checksum, and standalone copies of the main and supplementary PDFs. Do not import the obsolete file set from the preceding version. `.zenodo.json` contains the record metadata and `release/ZENODO_PUBLISH_CHECKLIST.md` lists the publication checks. The preceding DOI `10.5281/zenodo.22207678` remains an immutable historical snapshot.
 
 ## Citation and licensing
 
