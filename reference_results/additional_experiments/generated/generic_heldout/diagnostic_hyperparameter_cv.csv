@@ -1,0 +1,2 @@
+motion_weight,appearance_continuity_weight,state_update_alpha,cv_score,n_folds,status
+0.2,0.0,0.1,,0,FROZEN_FIT_REUSED

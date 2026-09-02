@@ -1,0 +1,11 @@
+{
+  "independent_estimator": {
+    "diagnostic": {"first": 315, "last": 326},
+    "preflight": {"first": 327, "last": 330},
+    "heldout": {"first": 331, "last": 360}
+  },
+  "parameter_sensitivity": {
+    "heldout": {"first": 361, "last": 390},
+    "note": "Independent untouched range used only for the prespecified parameter grid."
+  }
+}

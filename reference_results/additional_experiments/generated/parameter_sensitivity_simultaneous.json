@@ -1,0 +1,14 @@
+{
+  "method": "seed-resampled max-absolute-deviation bootstrap",
+  "family": "all 54 sensitivity effects (27 settings x 2 primary metrics)",
+  "confidence_level": 0.95,
+  "bootstrap_replicates": 20000,
+  "rng_seed": 20260902,
+  "resampling_unit": "held-out seed, shared jointly across all settings and metrics",
+  "critical_max_absolute_deviation": 0.11076388888888891,
+  "settings": 27,
+  "seeds": 30,
+  "both_simultaneous_positive_count": 24,
+  "both_simultaneous_positive_fraction": 0.8888888888888888,
+  "output_csv": "parameter_sensitivity_simultaneous.csv"
+}

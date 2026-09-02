@@ -1,0 +1,13 @@
+{
+  "parameter_settings": 27,
+  "both_sign_preserved_count": 25,
+  "both_sign_preserved_fraction": 0.9259259259259259,
+  "both_ci_supported_count": 25,
+  "both_ci_supported_fraction": 0.9259259259259259,
+  "both_profile_direction_3of4_count": 25,
+  "both_profile_direction_3of4_fraction": 0.9259259259259259,
+  "worst_identity_advantage": -0.24756944444444445,
+  "worst_lure_rejection_advantage": 0.21099537037037042,
+  "median_identity_advantage": 0.7601851851851851,
+  "median_lure_rejection_advantage": 0.5237268518518519
+}

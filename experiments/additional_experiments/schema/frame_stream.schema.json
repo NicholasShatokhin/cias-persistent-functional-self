@@ -1,0 +1,167 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CIAS additional-experiments frame stream row",
+  "type": "object",
+  "required": [
+    "run_id",
+    "seed",
+    "profile",
+    "scenario",
+    "frame",
+    "time_s",
+    "observation_id",
+    "x",
+    "y",
+    "appearance",
+    "appearance_0",
+    "appearance_1",
+    "appearance_2",
+    "appearance_3",
+    "efference",
+    "outcome",
+    "motor",
+    "proprio",
+    "temporal",
+    "crossmodal",
+    "persistence",
+    "physical",
+    "autonomy",
+    "goal",
+    "response",
+    "tool",
+    "intero",
+    "homeo",
+    "history",
+    "is_true_lineage",
+    "is_lure",
+    "truth_entity_id",
+    "scene_hash",
+    "change_point"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "seed": {
+      "type": "integer"
+    },
+    "profile": {
+      "type": "string",
+      "enum": [
+        "ground_creature",
+        "wheeled_robot",
+        "drone",
+        "virtual_avatar"
+      ]
+    },
+    "scenario": {
+      "type": "string"
+    },
+    "frame": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 239
+    },
+    "observation_id": {
+      "type": "string"
+    },
+    "is_true_lineage": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "is_lure": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "truth_entity_id": {
+      "type": "string"
+    },
+    "scene_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "change_point": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "time_s": {
+      "type": "number"
+    },
+    "x": {
+      "type": "number"
+    },
+    "y": {
+      "type": "number"
+    },
+    "appearance": {
+      "type": "number"
+    },
+    "appearance_0": {
+      "type": "number"
+    },
+    "appearance_1": {
+      "type": "number"
+    },
+    "appearance_2": {
+      "type": "number"
+    },
+    "appearance_3": {
+      "type": "number"
+    },
+    "efference": {
+      "type": "number"
+    },
+    "outcome": {
+      "type": "number"
+    },
+    "motor": {
+      "type": "number"
+    },
+    "proprio": {
+      "type": "number"
+    },
+    "temporal": {
+      "type": "number"
+    },
+    "crossmodal": {
+      "type": "number"
+    },
+    "persistence": {
+      "type": "number"
+    },
+    "physical": {
+      "type": "number"
+    },
+    "autonomy": {
+      "type": "number"
+    },
+    "goal": {
+      "type": "number"
+    },
+    "response": {
+      "type": "number"
+    },
+    "tool": {
+      "type": "number"
+    },
+    "intero": {
+      "type": "number"
+    },
+    "homeo": {
+      "type": "number"
+    },
+    "history": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

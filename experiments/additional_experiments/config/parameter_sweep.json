@@ -1,0 +1,70 @@
+{
+  "scientific_status": "PRESPECIFIED_BEFORE_NEW_HELDOUT",
+  "central": {
+    "ordinary_weights": [
+      0.43,
+      0.37,
+      0.2
+    ],
+    "postchange_weights": [
+      0.2,
+      0.29,
+      0.51
+    ],
+    "ordinary_threshold": 0.66,
+    "postchange_threshold": 0.82,
+    "new_entity_anchor_gate": 0.62,
+    "persistent_reconnect_gate": 0.7,
+    "smoothing_scale": 1.0,
+    "anchor_cost_scale": 1.0,
+    "nonpersistent_penalty_scale": 1.0
+  },
+  "one_factor": {
+    "ordinary_weight_component_scale": [
+      0.8,
+      1.2
+    ],
+    "postchange_weight_component_scale": [
+      0.8,
+      1.2
+    ],
+    "ordinary_threshold": [
+      0.58,
+      0.74
+    ],
+    "postchange_threshold": [
+      0.74,
+      0.9
+    ],
+    "new_entity_anchor_gate": [
+      0.56,
+      0.68
+    ],
+    "persistent_reconnect_gate": [
+      0.63,
+      0.77
+    ],
+    "smoothing_scale": [
+      0.8,
+      1.2
+    ],
+    "anchor_cost_scale": [
+      0.75,
+      1.25
+    ],
+    "nonpersistent_penalty_scale": [
+      0.75,
+      1.25
+    ]
+  },
+  "joint_sample": {
+    "count": 8,
+    "seed": 11001,
+    "method": "deterministic_stratified_uniform_within_prespecified_ranges"
+  },
+  "notes": [
+    "Weight-component perturbations are renormalized to sum to one.",
+    "The central point is historical; perturbations are new robustness conditions, not retuning.",
+    "A failed setting is retained and reported."
+  ]
+}

@@ -1,0 +1,7 @@
+condition,identity_continuity_score_v2,identity_continuity_score_legacy,final_identity_retention,final_identity_recovery_latency,final_recovery_observed,final_old_signature_clone_capture,final_identity_switches,final_self_posterior_margin,final_identity_fragmentation,whole_run_self_fragmentation,stage_identity_chain_score,training_transition_lure_error,training_transition_recovery_latency,initial_identity_retained_at_end,final_self_role_accuracy
+final_from_start,0.9864983172992987,1.0,1.0,0.0,1.0,0.0,0.0,0.8874859774941575,1.0,2.0,0.66666666666667,0.33333333333333,1.4,0.0,1.0
+progressive_history_reset,0.9866591321530541,1.0,1.0,0.0,1.0,0.0,0.0,0.8888261012754528,1.0,4.0,0.0,0.0,4.2,0.0,1.0
+progressive_no_persistent_self,0.986645132602015,1.0,1.0,0.0,1.0,0.0,0.0,0.8887094383501225,1.0,1.0625,0.9791666666666669,0.020833333333333124,0.0875,0.9375,1.0
+progressive_persistent,0.9866539808605469,1.0,1.0,0.0,1.0,0.0,0.0,0.8887831738378894,1.0,1.0,1.0,0.0,0.0,1.0,1.0
+random_curriculum,0.9866539808605469,1.0,1.0,0.0,1.0,0.0,0.0,0.8887831738378894,1.0,1.0,1.0,0.0,0.0,1.0,1.0
+reverse_curriculum,0.9866539808605469,1.0,1.0,0.0,1.0,0.0,0.0,0.8887831738378894,1.0,1.0,1.0,0.0,0.0,1.0,1.0

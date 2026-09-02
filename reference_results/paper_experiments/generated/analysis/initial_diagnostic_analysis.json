@@ -1,0 +1,264 @@
+{
+  "stage": "initial_diagnostic",
+  "source": "reference_results/paper_experiments/generated/initial_diagnostic_runs.csv",
+  "structure": {
+    "rows": 192,
+    "expected_runs": 192,
+    "row_count_ok": true,
+    "duplicates": 0,
+    "missing_values": 0,
+    "profiles": [
+      "drone",
+      "ground_creature",
+      "virtual_avatar",
+      "wheeled_robot"
+    ],
+    "conditions": [
+      "final_from_start",
+      "progressive_history_reset",
+      "progressive_no_persistent_self",
+      "progressive_persistent",
+      "random_curriculum",
+      "reverse_curriculum"
+    ],
+    "structure_ok": true
+  },
+  "matched_primary_scene_hash_ok": true,
+  "condition_means": [
+    {
+      "condition": "final_from_start",
+      "identity_continuity_score_v2": 0.9864983172992987,
+      "identity_continuity_score_legacy": 1.0,
+      "final_identity_retention": 1.0,
+      "final_identity_recovery_latency": 0.0,
+      "final_recovery_observed": 1.0,
+      "final_old_signature_clone_capture": 0.0,
+      "final_identity_switches": 0.0,
+      "final_self_posterior_margin": 0.8874859774941575,
+      "final_identity_fragmentation": 1.0,
+      "whole_run_self_fragmentation": 2.0,
+      "stage_identity_chain_score": 0.66666666666667,
+      "training_transition_lure_error": 0.33333333333333,
+      "training_transition_recovery_latency": 1.4,
+      "initial_identity_retained_at_end": 0.0,
+      "final_self_role_accuracy": 1.0
+    },
+    {
+      "condition": "progressive_history_reset",
+      "identity_continuity_score_v2": 0.9866591321530541,
+      "identity_continuity_score_legacy": 1.0,
+      "final_identity_retention": 1.0,
+      "final_identity_recovery_latency": 0.0,
+      "final_recovery_observed": 1.0,
+      "final_old_signature_clone_capture": 0.0,
+      "final_identity_switches": 0.0,
+      "final_self_posterior_margin": 0.8888261012754528,
+      "final_identity_fragmentation": 1.0,
+      "whole_run_self_fragmentation": 4.0,
+      "stage_identity_chain_score": 0.0,
+      "training_transition_lure_error": 0.0,
+      "training_transition_recovery_latency": 4.2,
+      "initial_identity_retained_at_end": 0.0,
+      "final_self_role_accuracy": 1.0
+    },
+    {
+      "condition": "progressive_no_persistent_self",
+      "identity_continuity_score_v2": 0.986645132602015,
+      "identity_continuity_score_legacy": 1.0,
+      "final_identity_retention": 1.0,
+      "final_identity_recovery_latency": 0.0,
+      "final_recovery_observed": 1.0,
+      "final_old_signature_clone_capture": 0.0,
+      "final_identity_switches": 0.0,
+      "final_self_posterior_margin": 0.8887094383501225,
+      "final_identity_fragmentation": 1.0,
+      "whole_run_self_fragmentation": 1.0625,
+      "stage_identity_chain_score": 0.9791666666666669,
+      "training_transition_lure_error": 0.020833333333333124,
+      "training_transition_recovery_latency": 0.0875,
+      "initial_identity_retained_at_end": 0.9375,
+      "final_self_role_accuracy": 1.0
+    },
+    {
+      "condition": "progressive_persistent",
+      "identity_continuity_score_v2": 0.9866539808605469,
+      "identity_continuity_score_legacy": 1.0,
+      "final_identity_retention": 1.0,
+      "final_identity_recovery_latency": 0.0,
+      "final_recovery_observed": 1.0,
+      "final_old_signature_clone_capture": 0.0,
+      "final_identity_switches": 0.0,
+      "final_self_posterior_margin": 0.8887831738378894,
+      "final_identity_fragmentation": 1.0,
+      "whole_run_self_fragmentation": 1.0,
+      "stage_identity_chain_score": 1.0,
+      "training_transition_lure_error": 0.0,
+      "training_transition_recovery_latency": 0.0,
+      "initial_identity_retained_at_end": 1.0,
+      "final_self_role_accuracy": 1.0
+    },
+    {
+      "condition": "random_curriculum",
+      "identity_continuity_score_v2": 0.9866539808605469,
+      "identity_continuity_score_legacy": 1.0,
+      "final_identity_retention": 1.0,
+      "final_identity_recovery_latency": 0.0,
+      "final_recovery_observed": 1.0,
+      "final_old_signature_clone_capture": 0.0,
+      "final_identity_switches": 0.0,
+      "final_self_posterior_margin": 0.8887831738378894,
+      "final_identity_fragmentation": 1.0,
+      "whole_run_self_fragmentation": 1.0,
+      "stage_identity_chain_score": 1.0,
+      "training_transition_lure_error": 0.0,
+      "training_transition_recovery_latency": 0.0,
+      "initial_identity_retained_at_end": 1.0,
+      "final_self_role_accuracy": 1.0
+    },
+    {
+      "condition": "reverse_curriculum",
+      "identity_continuity_score_v2": 0.9866539808605469,
+      "identity_continuity_score_legacy": 1.0,
+      "final_identity_retention": 1.0,
+      "final_identity_recovery_latency": 0.0,
+      "final_recovery_observed": 1.0,
+      "final_old_signature_clone_capture": 0.0,
+      "final_identity_switches": 0.0,
+      "final_self_posterior_margin": 0.8887831738378894,
+      "final_identity_fragmentation": 1.0,
+      "whole_run_self_fragmentation": 1.0,
+      "stage_identity_chain_score": 1.0,
+      "training_transition_lure_error": 0.0,
+      "training_transition_recovery_latency": 0.0,
+      "initial_identity_retained_at_end": 1.0,
+      "final_self_role_accuracy": 1.0
+    }
+  ],
+  "endpoint_nondegeneracy": {
+    "metric": "identity_continuity_score_legacy",
+    "mean": 1.0,
+    "exact_floor_fraction": 0.0,
+    "exact_ceiling_fraction": 1.0
+  },
+  "diagnostic_interpretation": {
+    "expected_role": "failure-mode discovery",
+    "ceiling_detected": true,
+    "confirmatory_status": "EXPLORATORY_ONLY"
+  },
+  "effects": [
+    {
+      "full": "progressive_persistent",
+      "control": "progressive_no_persistent_self",
+      "metric": "identity_continuity_score_legacy",
+      "effect_full_advantage": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0,
+      "cohen_dz": NaN,
+      "seed_win_rate": 0.0,
+      "seed_tie_rate": 1.0,
+      "body_wins": 0,
+      "profile_effects": {
+        "drone": 0.0,
+        "ground_creature": 0.0,
+        "virtual_avatar": 0.0,
+        "wheeled_robot": 0.0
+      },
+      "n_seeds": 8
+    },
+    {
+      "full": "progressive_persistent",
+      "control": "progressive_history_reset",
+      "metric": "identity_continuity_score_legacy",
+      "effect_full_advantage": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0,
+      "cohen_dz": NaN,
+      "seed_win_rate": 0.0,
+      "seed_tie_rate": 1.0,
+      "body_wins": 0,
+      "profile_effects": {
+        "drone": 0.0,
+        "ground_creature": 0.0,
+        "virtual_avatar": 0.0,
+        "wheeled_robot": 0.0
+      },
+      "n_seeds": 8
+    },
+    {
+      "full": "progressive_persistent",
+      "control": "final_from_start",
+      "metric": "identity_continuity_score_legacy",
+      "effect_full_advantage": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0,
+      "cohen_dz": NaN,
+      "seed_win_rate": 0.0,
+      "seed_tie_rate": 1.0,
+      "body_wins": 0,
+      "profile_effects": {
+        "drone": 0.0,
+        "ground_creature": 0.0,
+        "virtual_avatar": 0.0,
+        "wheeled_robot": 0.0
+      },
+      "n_seeds": 8
+    },
+    {
+      "full": "progressive_persistent",
+      "control": "reverse_curriculum",
+      "metric": "identity_continuity_score_legacy",
+      "effect_full_advantage": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0,
+      "cohen_dz": NaN,
+      "seed_win_rate": 0.0,
+      "seed_tie_rate": 1.0,
+      "body_wins": 0,
+      "profile_effects": {
+        "drone": 0.0,
+        "ground_creature": 0.0,
+        "virtual_avatar": 0.0,
+        "wheeled_robot": 0.0
+      },
+      "n_seeds": 8
+    },
+    {
+      "full": "progressive_persistent",
+      "control": "random_curriculum",
+      "metric": "identity_continuity_score_legacy",
+      "effect_full_advantage": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0,
+      "cohen_dz": NaN,
+      "seed_win_rate": 0.0,
+      "seed_tie_rate": 1.0,
+      "body_wins": 0,
+      "profile_effects": {
+        "drone": 0.0,
+        "ground_creature": 0.0,
+        "virtual_avatar": 0.0,
+        "wheeled_robot": 0.0
+      },
+      "n_seeds": 8
+    },
+    {
+      "full": "progressive_persistent",
+      "control": "progressive_no_persistent_self",
+      "metric": "final_old_signature_clone_capture",
+      "effect_full_advantage": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0,
+      "cohen_dz": NaN,
+      "seed_win_rate": 0.0,
+      "seed_tie_rate": 1.0,
+      "body_wins": 0,
+      "profile_effects": {
+        "drone": 0.0,
+        "ground_creature": 0.0,
+        "virtual_avatar": 0.0,
+        "wheeled_robot": 0.0
+      },
+      "n_seeds": 8
+    }
+  ]
+}

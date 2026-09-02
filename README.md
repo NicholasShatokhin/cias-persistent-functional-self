@@ -1,105 +1,157 @@
-# Replication Package for *A Causal Theory of Persistent Functional Self in Embodied Artificial Agents*
+# Persistent Functional Self — Reproducibility Package
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22207678.svg)](https://doi.org/10.5281/zenodo.22207678)
+Code, protocols, analysis scripts, and reference outputs for the study **A Causal Theory of Persistent Functional Self in Embodied Artificial Agents**.
 
-**Author:** Mykola Shatokhin  
-**ORCID:** https://orcid.org/0000-0003-0028-6208  
-**Repository:** https://github.com/NicholasShatokhin/cias-persistent-functional-self  
-**Archived release:** https://doi.org/10.5281/zenodo.22207678
+The repository is designed for independent use. A fresh checkout can reproduce the full experimental program with a local Godot 4.7.x executable. One completed reference execution is included under `reference_results/`; those files are never used as inputs by the runners.
 
-This repository contains the frozen materials required to audit and reproduce the narrow claims reported in:
+## Requirements
 
-> **A Causal Theory of Persistent Functional Self in Embodied Artificial Agents**
+- Windows 10/11 or Linux
+- Python 3.10+
+- Godot Engine **4.7.x** standard build
+- Internet access on the first run so Python can install the packages in `requirements.txt`
 
-The repository is a **replication package**, not the full CIAS research repository.
+## Quick start
 
-## Scientific scope
+### 1. Smoke test
 
-The package concerns persistent **functional** identity in simulated embodied artificial agents. It tests whether identity remains associated with causal continuity when appearance, position, and selected short-term causal cues become misleading.
-
-It does **not** establish phenomenal consciousness, qualia, or human-like selfhood.
-
-## Repository contents
-
-- `frozen_code/` — frozen ontology and adversarial benchmark used by the v7.0 confirmatory program.
-- `protocol/` — frozen scientific protocol and seed ledger.
-- `data/` — v7.0-p1/p2 diagnostic data and v7.0-r1 preflight/held-out raw data and manifests.
-- `analysis/` — frozen confirmatory analyzer and derived summaries.
-- `provenance/` — SHA-256 record for frozen scientific code.
-- `CITATION.cff` — machine-readable citation metadata.
-- `LICENSES.md` and `LICENSES/` — code/data licensing.
-
-## Primary confirmatory experiment
-
-The frozen **v7.0-r1** experiment used:
-
-- preflight seeds `273–276`;
-- held-out seeds `277–306`;
-- four embodiment profiles;
-- three frozen conditions;
-- `360/360` held-out runs after preflight PASS.
-
-The confirmatory claim is deliberately narrow: a **persistent causal identity anchor** is necessary for robust functional Self continuity under the frozen adversarial morphology/appearance-change task.
-
-## Reproduce the confirmatory analysis
-
-### Requirements
-
-Python 3.10+ with:
-
-```bash
-pip install pandas scipy
-```
-
-### Run
-
-From the repository root:
-
-```bash
-python analysis/analyze_v70r1.py \
-  data/v70r1_heldout_277-306_2026-08-21T12-40-43_raw.csv \
-  --outdir reproduced_analysis
-```
-
-On Windows PowerShell:
+Windows:
 
 ```powershell
-python .\analysis\analyze_v70r1.py `
-  .\data\v70r1_heldout_277-306_2026-08-21T12-40-43_raw.csv `
-  --outdir .\reproduced_analysis
+.\RUN_SMOKE_WINDOWS.bat "C:\path\to\Godot_v4.7-stable_win64.exe"
 ```
 
-The expected decision is **confirmatory PASS** under the criteria frozen in:
+Linux:
 
-`protocol/SCIENTIFIC_PROTOCOL_V70R1.md`
+```bash
+./RUN_SMOKE_LINUX.sh /path/to/godot
+```
 
-## Integrity and provenance
+The smoke test validates both headless Godot harnesses and does not open any confirmatory or held-out seed range.
 
-The frozen identity code hashes are recorded in:
+### 2. Full reproduction
 
-`provenance/FROZEN_SCIENTIFIC_CODE_SHA256.json`
+Windows:
 
-Repository-file hashes are listed in:
+```powershell
+.\RUN_ALL_WINDOWS.bat "C:\path\to\Godot_v4.7-stable_win64.exe"
+```
 
-`SHA256SUMS.txt`
+Linux:
 
-To verify the release archive after downloading it, compare its SHA-256 with the checksum published in the corresponding GitHub Release / Zenodo record.
+```bash
+./RUN_ALL_LINUX.sh /path/to/godot
+```
 
-## Citation
+The runner creates its Python environment, verifies the canonical ontology hash, executes every stage, computes all summaries, and writes execution provenance automatically.
 
-GitHub will display citation metadata from [`CITATION.cff`](CITATION.cff).
+## Experimental program
 
-For release `v1.0.0`, cite the archived Zenodo record: **10.5281/zenodo.22207678** (https://doi.org/10.5281/zenodo.22207678). The associated article is **"A Causal Theory of Persistent Functional Self in Embodied Artificial Agents"**. Its public preprint/journal citation will be added here when available.
+| Stage | Seeds | Purpose |
+|---|---:|---|
+| Initial diagnostic | 253–260 | Reproduce the ceiling and unmatched-change-point failure mode of the first benchmark design. |
+| Matched diagnostic | 261–272 | Evaluate the repaired matched design and theory-reduction conditions. |
+| Preflight | 273–276 | Structural and nondegeneracy checks before the primary confirmatory range. |
+| Confirmatory | 277–306 | Full, persistent-anchor lesion, and history-reset comparison. |
+| Generic-estimator diagnostic | 315–326 | Fit a generic recurrent estimator on diagnostic labels only. |
+| Comparator preflight | 327–330 | Technical validation of the frozen diagnostic-only estimator. |
+| Independent-estimator held-out | 331–360 | Compare CIAS with the generic estimator on untouched observations. |
+| Parameter-sensitivity held-out | 361–390 | Evaluate 27 prespecified parameter settings on a separate untouched range. |
 
-## Licensing
+Seeds 307–314 are intentionally unused in this package.
 
-This is a mixed-content research repository:
+The complete stage definitions are in `protocols/COMPLETE_EXPERIMENTAL_PROGRAM.md`.
 
-- **software/code:** MIT License;
-- **data and documentation:** CC BY 4.0.
+## Included reference execution
 
-See [`LICENSES.md`](LICENSES.md) for the exact scope.
+`reference_results/` contains one completed execution produced with Godot `4.7.stable.official.5b4e0cb0f` and the canonical core identified in `provenance/FROZEN_CORE_IDENTITY.json`.
 
-## Reproducibility boundary
+Headline outputs from that execution:
 
-This package reproduces the reported analysis from frozen raw results. It does not claim to reproduce the complete developmental history of the CIAS project or every exploratory experiment that preceded the frozen confirmatory protocol.
+- Full vs persistent-anchor lesion, identity-continuity advantage: **0.4734**, 95% CI **[0.4160, 0.5308]**.
+- Full vs persistent-anchor lesion, lure-rejection advantage: **0.7405**, 95% CI **[0.6529, 0.8280]**.
+- CIAS Full minus generic recurrent estimator, continuity: **−0.0506**, 95% CI **[−0.0676, −0.0345]**.
+- CIAS Full minus generic recurrent estimator, lure rejection: **−0.0218**, 95% CI **[−0.0314, −0.0130]**.
+- Both primary Full-vs-lesion effect signs were preserved in **25/27 (92.6%)** prespecified parameter settings using pointwise descriptive 95% bootstrap intervals.
+- A family-wise max-bootstrap check across all **54 sensitivity effects** retained simultaneous positive lower bounds for both primary effects in **24/27 (88.9%)** settings.
+
+Negative CIAS-minus-generic values mean that the generic recurrent estimator scored slightly higher on those two held-out metrics. The raw and derived files are retained so this comparison can be inspected directly. The 323 MB frame-level parameter-sensitivity trace is stored as deterministic `parameter_sensitivity_tracking.csv.gz` (about 7.5 MB); `reference_results/RAW_REFERENCE_FILE.json` records SHA-256 hashes and sizes for both compressed and uncompressed representations. No Git LFS is required, and every file in the repository is below GitHub's 100 MB object limit.
+
+To materialize the large trace locally without changing the repository copy:
+
+```bash
+gzip -dk reference_results/additional_experiments/generated/parameter_sensitivity_tracking.csv.gz
+```
+
+The decompressed CSV can be verified against `reference_results/RAW_REFERENCE_FILE.json`.
+
+## Output locations for a new run
+
+A fresh run writes new files to:
+
+```text
+experiments/paper_experiments/results/generated/
+experiments/additional_experiments/results/generated/
+provenance/paper_experiments_execution/
+provenance/additional_experiments_execution/
+provenance/EXECUTION_SUMMARY.json
+```
+
+These paths are intentionally separate from `reference_results/`.
+
+## Interrupted execution
+
+A held-out access marker is written before the first run in each protected range. If execution stops after a protected range has been opened, continue with:
+
+```powershell
+.\RUN_RESUME_WINDOWS.bat "C:\path\to\Godot_v4.7-stable_win64.exe"
+```
+
+Resume mode preserves completed stages and continues from the existing checkpoint. It does not present a repeated held-out execution as a fresh opening.
+
+## Canonical mechanism
+
+The executable ontology is:
+
+```text
+frozen_code/ontology_core.gd
+```
+
+Its SHA-256 is stored in `provenance/FROZEN_CORE_IDENTITY.json` and verified automatically before execution.
+
+## Repository layout
+
+```text
+frozen_code/                         canonical ontology mechanism
+experiments/paper_experiments/      diagnostic, preflight, and confirmatory harness
+experiments/additional_experiments/ independent estimator and parameter sensitivity
+protocols/                           experimental specification
+reference_results/                   completed reference execution; never used as runner input
+provenance/                          canonical hashes and local execution metadata
+tests/                               regression and reproducibility checks
+tools/                               orchestration, patching, manifest, and GitHub-size utilities
+reference_environment/               exact Python/Godot versions for the included execution
+paper/manuscript/                     current Paper I manuscript and supplementary material
+release/                              Zenodo publication checklist
+```
+
+
+## Reconstructing the reference software environment
+
+A new reproduction run uses compatible ranges from `requirements.txt`. The exact Python package versions recorded for the included reference execution are pinned in:
+
+```text
+reference_environment/requirements-reference.txt
+```
+
+The reference execution used Python `3.13.14` and Godot `4.7.stable.official.5b4e0cb0f`.
+
+## GitHub and archival storage
+
+The repository is intentionally usable with ordinary Git. `tools/verify_github_limits.py` checks that no file exceeds GitHub's 100 MB hard object limit. The only original output above that threshold, the frame-level parameter-sensitivity trace, is stored as `.csv.gz`; pandas can read it directly with `pandas.read_csv`.
+
+The complete rerun should also be archived as a new immutable Zenodo version. `.zenodo.json` contains release metadata and `release/ZENODO_PUBLISH_CHECKLIST.md` lists the final DOI-update steps. The preceding Zenodo DOI `10.5281/zenodo.22207678` remains a historical snapshot and should not be overwritten.
+
+## Citation and licensing
+
+Citation metadata are provided in `CITATION.cff`. Software is licensed under MIT; reference data are made available under CC BY 4.0 as described in `LICENSE`. Manuscript copyright is handled separately from the software license.

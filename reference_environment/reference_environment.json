@@ -1,0 +1,7 @@
+{
+  "python": "3.13.14",
+  "godot": "4.7.stable.official.5b4e0cb0f",
+  "platform_family": "Windows",
+  "requirements_lock": "reference_environment/requirements-reference.txt",
+  "source": "reference execution log and provenance"
+}

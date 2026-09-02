@@ -1,0 +1,7 @@
+full,control,metric,effect_full_advantage,ci95_low,ci95_high,cohen_dz,seed_win_rate,seed_tie_rate,body_wins,profile_effects,n_seeds
+progressive_persistent,progressive_no_persistent_self,identity_continuity_score_legacy,0.0,0.0,0.0,,0.0,1.0,0,"{""drone"": 0.0, ""ground_creature"": 0.0, ""virtual_avatar"": 0.0, ""wheeled_robot"": 0.0}",8
+progressive_persistent,progressive_history_reset,identity_continuity_score_legacy,0.0,0.0,0.0,,0.0,1.0,0,"{""drone"": 0.0, ""ground_creature"": 0.0, ""virtual_avatar"": 0.0, ""wheeled_robot"": 0.0}",8
+progressive_persistent,final_from_start,identity_continuity_score_legacy,0.0,0.0,0.0,,0.0,1.0,0,"{""drone"": 0.0, ""ground_creature"": 0.0, ""virtual_avatar"": 0.0, ""wheeled_robot"": 0.0}",8
+progressive_persistent,reverse_curriculum,identity_continuity_score_legacy,0.0,0.0,0.0,,0.0,1.0,0,"{""drone"": 0.0, ""ground_creature"": 0.0, ""virtual_avatar"": 0.0, ""wheeled_robot"": 0.0}",8
+progressive_persistent,random_curriculum,identity_continuity_score_legacy,0.0,0.0,0.0,,0.0,1.0,0,"{""drone"": 0.0, ""ground_creature"": 0.0, ""virtual_avatar"": 0.0, ""wheeled_robot"": 0.0}",8
+progressive_persistent,progressive_no_persistent_self,final_old_signature_clone_capture,0.0,0.0,0.0,,0.0,1.0,0,"{""drone"": 0.0, ""ground_creature"": 0.0, ""virtual_avatar"": 0.0, ""wheeled_robot"": 0.0}",8

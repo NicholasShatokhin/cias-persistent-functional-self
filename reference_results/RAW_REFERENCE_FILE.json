@@ -1,0 +1,10 @@
+{
+  "file": "reference_results/additional_experiments/generated/parameter_sensitivity_tracking.csv.gz",
+  "compression": "gzip",
+  "uncompressed_filename": "parameter_sensitivity_tracking.csv",
+  "uncompressed_size_bytes": 323353595,
+  "uncompressed_sha256": "165e46c4464b6def40590e22cc1ee5d72e35e753ab2e25ae161632e96d43c488",
+  "compressed_size_bytes": 7519844,
+  "compressed_sha256": "f7f916af10f16b29987c8bb508152e47fac53c2b0af8b2fa39aa68cfa7fc03bc",
+  "note": "Compressed to keep every Git object below the GitHub 100 MB hard limit. pandas.read_csv reads this file directly."
+}

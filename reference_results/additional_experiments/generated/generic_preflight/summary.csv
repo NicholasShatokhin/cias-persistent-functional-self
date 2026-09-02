@@ -1,0 +1,5 @@
+model,metric,mean,ci_low,ci_high,n_seeds
+appearance_continuity_sanity,identity_continuity,0.0,0.0,0.0,4
+appearance_continuity_sanity,lure_capture,0.0,0.0,0.0,4
+generic_recurrent_filter,identity_continuity,0.9991319444444444,0.9973958333333333,1.0,4
+generic_recurrent_filter,lure_capture,0.0008680555555555555,0.0,0.0026041666666666665,4

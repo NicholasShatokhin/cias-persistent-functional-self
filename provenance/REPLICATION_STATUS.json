@@ -1,0 +1,8 @@
+{
+  "package_status": "PUBLIC_REPRODUCIBILITY_PACKAGE",
+  "reference_execution_included": true,
+  "active_execution_workspace_clean": true,
+  "runtime_target": "Godot 4.7.x",
+  "reference_execution_path": "reference_results/",
+  "reference_execution_status": "COMPLETE"
+}

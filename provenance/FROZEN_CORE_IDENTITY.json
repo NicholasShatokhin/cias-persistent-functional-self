@@ -1,0 +1,6 @@
+{
+  "path": "frozen_code/ontology_core.gd",
+  "sha256": "b81f43221b290fc09c06c69719a24533cdd802fe483347301d6015adda9eb38c",
+  "status": "CANONICAL_FRESH_REPLICATION_CORE",
+  "note": "Canonical executable ontology used by this reproducibility package. The SHA-256 is verified before each execution."
+}

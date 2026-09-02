@@ -1,0 +1,11 @@
+{
+  "initial_diagnostic": {"first": 253, "last": 260, "conditions": 6, "profiles": 4, "expected_runs": 192},
+  "matched_diagnostic": {"first": 261, "last": 272, "conditions": 6, "profiles": 4, "expected_runs": 288},
+  "preflight": {"first": 273, "last": 276, "conditions": 3, "profiles": 4, "expected_runs": 48},
+  "confirmatory": {"first": 277, "last": 306, "conditions": 3, "profiles": 4, "expected_runs": 360},
+  "reserved_external": {"first": 307, "last": 314, "note": "Reserved by the broader CIAS program; not used here."},
+  "independent_estimator_diagnostic": {"first": 315, "last": 326},
+  "independent_estimator_preflight": {"first": 327, "last": 330},
+  "independent_estimator_heldout": {"first": 331, "last": 360},
+  "parameter_sensitivity_heldout": {"first": 361, "last": 390}
+}

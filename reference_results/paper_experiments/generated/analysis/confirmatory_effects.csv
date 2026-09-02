@@ -1,0 +1,3 @@
+full,control,metric,effect_full_advantage,ci95_low,ci95_high,cohen_dz,seed_win_rate,seed_tie_rate,body_wins,profile_effects,n_seeds
+progressive_persistent,progressive_no_persistent_self,identity_continuity_score_v2,0.4734006827354879,0.4159806800782239,0.5308206853927518,3.078556459393388,1.0,0.0,4,"{""drone"": 0.5278691387240003, ""ground_creature"": 0.44110906960318796, ""virtual_avatar"": 0.33088215817470334, ""wheeled_robot"": 0.59374236444006}",30
+progressive_persistent,progressive_no_persistent_self,final_old_signature_clone_capture,0.7404513888888891,0.6528828016849644,0.8280199760928137,3.1574004036207386,1.0,0.0,4,"{""drone"": 0.88888888888889, ""ground_creature"": 0.6666666666666666, ""virtual_avatar"": 0.5, ""wheeled_robot"": 0.9062499999999997}",30

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "mission": "pipeline/readiness gate only; no desired-effect conditioning",
+  "reasons": [],
+  "seeds": [
+    327,
+    328,
+    329,
+    330
+  ],
+  "runs": 16,
+  "tracking_rows": 7680
+}

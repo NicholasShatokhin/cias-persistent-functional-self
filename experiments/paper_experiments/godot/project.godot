@@ -1,0 +1,9 @@
+; CIAS paper experiments headless subproject
+config_version=5
+
+[application]
+config/name="CIAS Paper Experiments"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

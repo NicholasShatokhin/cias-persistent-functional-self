@@ -1,0 +1,326 @@
+\documentclass[10pt,journal,onecolumn]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage{amsmath,mathtools}
+\usepackage{booktabs,array,tabularx,longtable}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{enumitem}
+\setlist{nosep,leftmargin=*}
+\usepackage{microtype}
+\newcommand{\Self}{\mathrm{Self}}
+\newcommand{\Tool}{\mathrm{Tool}}
+\newcommand{\Object}{\mathrm{Object}}
+\newcommand{\Agent}{\mathrm{Agent}}
+\newcommand{\argmin}{\operatorname*{arg\,min}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newenvironment{proof}{\par\noindent\textit{Proof.} }{\hfill$\square$\par}
+
+\title{Supplementary Material for ``A Causal Theory of Persistent Functional Self in Embodied Artificial Agents''}
+\author{Mykola Shatokhin}
+\begin{document}
+\maketitle
+
+\section{Purpose of this Supplement}
+This supplement makes explicit the implementation and experimental details that are easy to misread in a compact main paper. In particular, it distinguishes: (i) theoretical structure from numerical engineering choices; (ii) a seed from a run; (iii) diagnostic development data from held-out confirmatory data; and (iv) sensorimotor exposure from task learning. The public repository and its reference execution provide the authoritative executable specification for this report.
+
+\section{One Run as an Executable Experimental Scenario}
+\subsection{Factorial unit}
+A single run is indexed by
+\begin{equation}
+(\text{seed},\text{embodiment profile},\text{condition}).
+\end{equation}
+The seed is an integer reproducibility key. It carries no developmental or learned state. In the executable benchmark the pseudorandom generator is initialized from an affine combination of seed, profile index, and condition index,
+\begin{equation}
+\rho=100003\,s+1009\,b+17\,c,
+\label{eq:rng}
+\end{equation}
+where $s$ is the seed, $b$ the embodiment-profile index, and $c$ the condition index. Equation~\eqref{eq:rng} has no cognitive interpretation. It is a deterministic engineering device that makes every run reproducible and avoids accidental reuse of one random stream across factorial cells. Paired conditions with the same seed/profile share homologous seed-indexed structure; their frame-level noise need not be byte-identical.
+
+\subsection{Timing}
+The simulation step is $\Delta t=0.1$~s. A confirmatory run contains four 42-frame exposure blocks and one 72-frame final probe:
+\begin{equation}
+4\times42+72=240\;\text{frames}=24\;\text{s}.
+\end{equation}
+There are three intermediate change points and one final-probe change point. During each intermediate transition, the old-appearance lure is present for 20 frames (2.0~s) and genuine Self cues are deliberately ambiguous for 24 frames (2.4~s). During the final probe, the lure is present for 48 of 72 frames (4.8 of 7.2~s) and the true Self remains under a harder cue regime throughout the probe.
+
+The first persistent identity key is taken only after an initial stabilization interval (frame 16 or later), avoiding a trivial metric based on the ontology's uninitialized first few observations. A successful recovery after a change requires five consecutive frames assigned to the prior lineage.
+
+\subsection{What the agent actually does}
+Each frame implements a controlled sensorimotor probing loop. The benchmark contains no semantic navigation or manipulation objective. The benchmark first generates an abstract action magnitude
+\begin{equation}
+a_f=\operatorname{clip}\!\left(0.66+0.25\sin(0.37f+0.11s),\;0.22,\;0.98\right),
+\label{eq:action}
+\end{equation}
+registers that action in the ontology, and moves the true Self around the current embodiment anchor according to a bounded oscillatory trajectory. The reference trajectory uses
+\begin{align}
+x_f&=x_0+27\sin(0.18f+0.30\ell),\\
+y_f&=y_0+22\cos(0.15f+0.17s),
+\label{eq:traj}
+\end{align}
+where $\ell\in\{0,1,2,3\}$ is the abstract morphology level and $(x_0,y_0)$ is the current anchor. The trigonometric constants are engineering choices that provide persistent nonstationary motion over the short benchmark without adding a task policy.
+
+The observation generator then emits appearance, position, efference/action-outcome evidence, proprioceptive closure, temporal match, cross-modal coherence, persistence, physical predictability, interoception, homeostatic coupling, and action-history match. A generic physical Object and a generic autonomous Agent are visible as distractors. Observation order is shuffled each frame.
+
+At a change point, the true Self receives a new anchor and body signature. The old-looking lure remains near the previous anchor and retains the previous signature. The lure receives partially plausible short-term action-correlated, proprioceptive, temporal, interoceptive, homeostatic, and history-like evidence, while true Self evidence is intermittently weakened. The resulting conflict spans several causal channels: the lure carries spoofed causal evidence in addition to visual similarity.
+
+\section{Exact Association Mechanism}
+\subsection{Normalized distances}
+For vectors of equal dimension, signature and role-feature distances use root-mean-square Euclidean distance,
+\begin{equation}
+d(v,w)=\sqrt{\frac{1}{D}\sum_{k=1}^D(v_k-w_k)^2}.
+\label{eq:rms}
+\end{equation}
+This normalization keeps vector dimensionality from mechanically increasing the scale of the cost.
+
+Predicted position is the previous entity position propagated by its estimated velocity over entity age. Position cost is normalized by the benchmark spatial scale,
+\begin{equation}
+d_x=\frac{\|x_{\rm obs}-x_{\rm pred}\|_2}{190}.
+\label{eq:pos}
+\end{equation}
+The denominator 190 is an implementation normalization constant chosen so that typical spatial errors are numerically comparable to signature and role-feature distances.
+
+The stale-entity penalty is bounded:
+\begin{equation}
+c_{\rm age}=\min(0.28,0.045\,\Delta n),
+\label{eq:age}
+\end{equation}
+with a 0.55 multiplier in the post-change regime. Here $\Delta n$ is the entity's age in frames since its last observation. Bounding the penalty prevents age alone from dominating all other cues; reducing it after a change point makes temporary discontinuity less likely to destroy lineage.
+
+\subsection{Ordinary and post-change association}
+The main-paper association cost is
+\begin{equation}
+C_{ij}=w_s d_s+w_xd_x+w_\phi d_\phi+c_{\rm age}.
+\end{equation}
+Ordinary weights are $(0.43,0.37,0.20)$ and the ordinary acceptance threshold is 0.66. Post-change weights are $(0.20,0.29,0.51)$ and the threshold is 0.82. Both weight triples sum to one. The numerical shift is deliberately qualitative: away from discontinuity, stable appearance and local motion are useful; after a declared discontinuity, causal-role structure becomes the largest contributor because old appearance has been made unreliable by construction.
+
+A dummy assignment to a new entity costs 0.64 in the ordinary regime and 0.79 after a change point. If a persistent lineage exists and an observation has $A_o>0.62$, the post-change new-entity cost is increased to 1.08. This discourages unnecessary fragmentation when an observation already looks causally compatible with the previous Self. These constants are hand-designed margins around the ordinary/post-change matching thresholds.
+
+\subsection{State updates}
+Entity state is updated with fixed exponential/linear interpolation rates. Role features use $\alpha=0.12$; position uses a faster 0.48 interpolation; velocity uses 0.24; signature uses 0.10 in ordinary continuity and 0.06 after a change point. The slower post-change signature update prevents a single abruptly transformed body observation from immediately overwriting all appearance history. These are implementation choices; no held-out fitting was used to obtain them.
+
+\section{Full Role-Energy Instantiation}
+The role scores are linear discriminants over engineered causal features:
+\begin{equation}
+\begin{aligned}
+E_{\Self}={}&2.70m+1.90p+0.90\tau+0.55\chi+0.35r+1.55i+1.25h+0.95a\\
+&-1.35u-0.75q-1.75\ell.
+\end{aligned}
+\label{eq:eself}
+\end{equation}
+\begin{align}
+E_{\Tool}={}&2.65m-1.35p+1.15\tau+0.55\chi+0.55r+2.25\ell-0.80u,\label{eq:etool}\\
+E_{\Object}={}&1.70r+1.65f+0.50\chi-1.55m-1.20u-0.65g-0.45q-0.75\ell,\label{eq:eobj}\\
+E_{\Agent}={}&1.00r+1.45u+1.45g+1.35q+1.45s+0.35\chi-1.00m.\label{eq:eagent}
+\end{align}
+Here $f$ is physical predictability, $g$ goal-directedness, and $s$ social-response evidence; all other variables are defined in the main paper.
+
+Table~\ref{tab:roleinterpret} gives the intended sign logic. The magnitudes encode relative engineering priorities; no statistical calibration as log-likelihood ratios was performed.
+
+\begin{table}[h]
+\caption{Interpretation of role-energy terms.}
+\label{tab:roleinterpret}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}p{0.10\textwidth}p{0.19\textwidth}X@{}}
+\toprule
+Feature & Dominant intended role & Why the sign/magnitude is structured this way \\
+\midrule
+$m$ motor authorship & Self/Tool positive; Object/Agent negative & Direct action consequence is strong evidence for something controlled by the system. A tool can also be tightly motor-coupled, so $m$ alone cannot define Self. \\
+$p$ proprioceptive closure & Self positive; Tool negative & Internal body-state correspondence is expected for the body itself and is used to distinguish body from an externally controlled tool. \\
+$\tau$ temporal match & Self/Tool positive & Temporal synchrony supports a causal link but is not specific enough to distinguish body from tool. \\
+$\chi$ cross-modal coherence & Mildly positive across roles & Coherent multi-sensory evidence supports entity stability but is intentionally nondiagnostic by itself. \\
+$r$ persistence & Object/Agent/Tool positive, weak Self positive & Persistence primarily supports temporal entity continuity and carries only weak Self-specific evidence. \\
+$i,h$ interoception/homeostasis & Strong Self positive & These are internal-body closure cues that an external object, agent, or tool should not normally possess. \\
+$a$ action-history match & Self positive & Longer action-contingency history supports ownership of the same sensorimotor loop. \\
+$u$ autonomous dynamics & Agent positive, Self/Tool/Object negative & Independent motion supports the external-Agent role and weakens controlled-body/tool hypotheses. \\
+$q,g,s$ response/goal/social cues & Agent positive & These encode behavior characteristic of another agent and provide little evidence for first-person body closure. \\
+$\ell$ tool coupling & Tool strongly positive, Self/Object negative & A tool can be controlled and temporally coupled without being the body itself. \\
+$f$ physical predictability & Object positive & Stable passive physical dynamics are characteristic of ordinary objects. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The role normalization
+\begin{equation}
+P(R=r\mid e)=\frac{e^{E_r}}{\sum_ke^{E_k}}
+\end{equation}
+creates a relative competition among roles. The code label ``posterior'' denotes a normalized operational role score. No fitted generative model or biological/population calibration underlies these values.
+
+\section{Persistent Anchor: Exact Gates and Costs}
+Observation and entity anchors are
+\begin{align}
+A_o&=0.26m+0.18p+0.24i+0.18h+0.14a,\\
+A_e&=0.26P(\Self)+0.18m_e+0.14p_e+0.18i_e+0.14h_e+0.10a_e.
+\end{align}
+Both sum to one. The relative ordering was chosen so that immediate motor/interoceptive closure dominates, while proprioception/homeostasis and history provide supporting evidence. $A_e$ includes the accumulated role score because an entity-level identity anchor should summarize both current feature history and the existing role classification.
+
+For $A_o>0.70$, reconnecting a post-change observation to the stored persistent candidate replaces its association cost by
+\begin{equation}
+C_{\rm anchor}=0.015+0.06(1-A_o)+0.04(1-A_e).
+\end{equation}
+A high-anchor observation assigned to a nonpersistent entity receives an additional penalty $2A_o$. A persistent candidate with weaker current anchor receives a softer penalty $0.45(1-A_o)$, preserving defeasibility when current evidence weakens. The mechanism privileges lineage subject to current causal compatibility.
+
+The two anchor gates serve different purposes: $A_o>0.62$ increases the cost of creating a new entity, whereas $A_o>0.70$ enables the strongest persistent reconnection. The gap defines an intermediate zone between fragmentation protection and strongest lineage reconnection.
+
+\section{Endpoint Construction and Coefficient Meaning}
+The confirmatory continuity endpoint is
+\begin{equation}
+Q=0.30R+0.20(1-L)+0.16G+0.24P+0.10F.
+\end{equation}
+The endpoint was created after a diagnostic revealed that a simpler discrete retention endpoint saturated. Its mission is to make several distinct failure modes visible on one continuous scale.
+
+\begin{table}[h]
+\caption{Interpretation and provenance of endpoint components.}
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}p{0.08\textwidth}p{0.13\textwidth}X p{0.19\textwidth}@{}}
+\toprule
+Term & Weight & Scientific meaning & Why this weight/class \\
+\midrule
+$R$ & 0.30 & Fraction of final-probe frames retaining the pre-change lineage & Largest single weight because persistent lineage is the primary target. \\
+$1-L$ & 0.20 & Rejection of the old-appearance lure while it is present & Prevents a high score when continuity is achieved by following the wrong old-looking body. \\
+$G$ & 0.16 & Speed of stable recovery after the change & Rewards rapid restoration while keeping transient failure secondary to final identity. \\
+$P$ & 0.24 & Continuous preference for true Self over lure in role score & Captures sub-discrete evidence and reduces dependence on a single hard assignment boundary. \\
+$F$ & 0.10 & Penalty for multiple identity fragments & Discourages solving the task by repeatedly creating new identities; kept smaller than identity/lure terms. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The weights sum to one by design. They were not optimized on the held-out seeds. The values are a prespecified measurement design that was frozen after the diagnostic endpoint repair. Similarly,
+\begin{equation}
+G=e^{-T_{\rm rec}/2.8}
+\end{equation}
+uses a 2.8~s engineering time constant, and
+\begin{equation}
+F=\frac{1}{1+0.28(n_{\rm frag}-1)}
+\end{equation}
+uses a 0.28 fragmentation scale. Neither number is presented as a natural constant.
+
+The continuous role preference is computed from the mean true-Self minus lure Self-role margin, $M$, by
+\begin{equation}
+P=\operatorname{clip}\left(\frac{M+1}{2},0,1\right).
+\end{equation}
+This simply maps a nominal $[-1,1]$ margin to $[0,1]$.
+
+\section{Experimental Staging Without Software-Version Vocabulary}
+The external scientific interpretation of the stages is:
+\begin{enumerate}
+\item \textbf{Initial diagnostic pilot:} 8 seeds $\times$ 4 profiles $\times$ 6 exploratory conditions = 192 runs. Purpose: discover ceiling/confound defects. Result: endpoint ceiling and unmatched change-point exposure; no confirmatory claim.
+\item \textbf{Matched diagnostic pilot:} 12 fresh seeds $\times$ 4 profiles $\times$ 6 conditions = 288 runs. Purpose: test repaired comparisons and decide which hypotheses survive to freeze. Result: persistent anchor remains important; privileged progressive order is unsupported.
+\item \textbf{Scientific freeze:} behavior-affecting code, cue schedules, condition definitions, all numerical parameters, endpoint equations, primary claims, decision thresholds, and reserved seed ranges are locked. Freeze is a methodological event and contributes no observations.
+\item \textbf{Preflight:} 4 fresh seeds $\times$ 4 profiles $\times$ 3 confirmatory conditions = 48 runs. Purpose: ensure the frozen pipeline is complete and nondegenerate. The gate checks pipeline readiness independently of the desired effect direction.
+\item \textbf{Held-out confirmation:} 30 untouched seeds $\times$ 4 profiles $\times$ 3 conditions = 360 runs. Purpose: primary inference under the already-fixed rules.
+\end{enumerate}
+
+The exact seed ranges are retained in the archive for reproducibility. Their integer values have no scientific meaning beyond uniquely identifying reserved scenario instances.
+
+\section{Why Progressive Order Was Removed from the Core Theory}
+In the fresh matched diagnostic, Full progressive order did not reliably outperform matched alternatives on the repaired continuity endpoint: progressive minus final-from-start was $+0.0147$ (95\% CI $[-0.0038,0.0331]$), progressive minus reverse was $+0.0071$ ($[-0.0041,0.0183]$), and progressive minus random was $+0.0051$ ($[-0.0124,0.0225]$). The data again provided no evidence for a privileged gradual morphology order in this task.
+
+The diagnostic data reduced the theory before confirmation. The unsupported developmental-order hypothesis was removed from the confirmatory claim before the held-out stage.
+
+\section{Confirmatory Effects by Embodiment Profile}
+\begin{table}[h]
+\caption{Fresh Full advantage over persistent-anchor lesion in the 30-seed confirmatory rerun.}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Profile & Continuity advantage $\Delta Q$ & Lure-rejection advantage \\
+\midrule
+Ground creature & 0.441 & 0.667 \\
+Wheeled robot & 0.594 & 0.906 \\
+Drone & 0.528 & 0.889 \\
+Virtual avatar & 0.331 & 0.500 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Full model averaged $Q=0.883$ and the anchor lesion $Q=0.410$. The paired seed-level effect was $+0.473$ (95\% CI $[0.416,0.531]$, $d_z=3.08$). Lure capture averaged 0.035 in Full and 0.775 after lesion; the corresponding lure-rejection advantage was $+0.740$ ($[0.653,0.828]$, $d_z=3.16$). Both effects had the expected direction in all four profiles and in all 30 seed-level averages.
+
+The history-reset control averaged $Q=0.874$, close to Full. Its stage identity chain score and initial-identity-retained-at-end metric were both zero, while Full scored one on both. Whole-run Self fragmentation averaged 4.24 after reset and 2.08 in Full. These quantities show that a high final-probe attribution score can coexist with loss of the original cross-stage lineage.
+
+\section{Analytical Properties}
+\begin{lemma}[Bounded exponential smoothing]
+Suppose $|\tilde z_t-\mu|\le\epsilon$ and $z_t=(1-\alpha)z_{t-1}+\alpha\tilde z_t$ with $0<\alpha\le1$. Then
+\begin{equation}
+|z_t-\mu|\le(1-\alpha)^t|z_0-\mu|+\epsilon.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Subtract $\mu$, apply the triangle inequality, and iterate:
+\begin{align*}
+|z_t-\mu|&\le(1-\alpha)|z_{t-1}-\mu|+\alpha\epsilon\\
+&\le(1-\alpha)^t|z_0-\mu|+\alpha\epsilon\sum_{k=0}^{t-1}(1-\alpha)^k.
+\end{align*}
+The geometric sum is at most $1/\alpha$.
+\end{proof}
+This property explains why a bounded sequence of noisy causal observations cannot drive the smoothed feature arbitrarily far from its underlying level.
+
+\noindent\emph{Appearance-only ambiguity sanity check.}
+Let $H_1,H_2$ exchange which of two bodies carries the persistent Self lineage. If $P(V\mid H_1)=P(V\mid H_2)$ for appearance observation $V$ and the priors are equal, Bayes' rule yields equal posterior probability for the two hypotheses. Appearance-only classification therefore has Bayes error at least $1/2$ under the symmetric construction. This elementary observation makes the benchmark's identifiability logic explicit; its role is limited to that sanity check.
+
+\section{Independent Estimator and Parameter Sensitivity}
+\subsection{Generic recurrent estimator}
+Architectural specificity was tested with a supervised recurrent state estimator that contains no explicit Self role, persistent lineage key, or change-point-specific reconnect rule. The model-visible feature vector contains four appearance components plus efference/outcome, motor, proprioceptive, temporal, cross-modal, persistence, physical, autonomy, goal, response, tool, interoceptive, homeostatic, and action-history features. Ground-truth lineage labels are used only on diagnostic seeds to fit Gaussian positive/negative emission distributions.
+
+At each frame, candidate observation $j$ receives the score
+\begin{equation}
+s_j=\log\frac{p(x_j\mid y=1)}{p(x_j\mid y=0)}-w_m d_{\rm motion}^2-w_a d_{\rm app}^2-0.05d_{\rm cue}^2,
+\end{equation}
+where the first term is the diagnostic-fitted Gaussian log-likelihood ratio and the remaining terms penalize departure from recurrent motion, appearance, and cue states. The selected candidate updates position, velocity, appearance, and cue state by exponential interpolation with rate $\alpha$. This comparator is intentionally generic: there is no variable named Self and no special operation at the benchmark change point.
+
+A prespecified $3\times3\times3$ grid over $w_m\in\{0.20,0.55,1.00\}$, $w_a\in\{0,0.25,0.60\}$, and $\alpha\in\{0.10,0.20,0.40\}$ was selected by grouped leave-one-seed-out cross-validation on diagnostic seeds 315--326. The selected configuration was
+\begin{equation}
+(w_m,w_a,\alpha)=(0.20,0.00,0.10).
+\end{equation}
+Seeds 327--330 served only as a technical preflight. The frozen diagnostic fit was then applied without retuning to held-out seeds 331--360.
+
+CIAS Full attained identity continuity 0.948 and lure capture 0.023 on this held-out stream. The generic recurrent estimator attained 0.998 and 0.0017, respectively. Paired Full-minus-generic differences were $-0.0506$ for identity continuity (95\% CI $[-0.0676,-0.0345]$) and $-0.0218$ for lure rejection ($[-0.0314,-0.0130]$). These intervals use 10,000 nonparametric bootstrap resamples of the 30 paired seed-level differences. The result demonstrates that the benchmark can be solved without the explicit CIAS anchor when the estimator receives the same engineered observation variables and diagnostic supervision. The fitted emission model retains current appearance components; only the additional recurrent appearance-continuity penalty was selected as zero.
+
+\subsection{Prespecified parameter sensitivity}
+Mechanism-level robustness was tested on a separate untouched range, seeds 361--390. The experiment evaluated 27 settings, each with Full and anchor-lesion conditions across four profiles, for 6480 runs. The grid varies ordinary and post-change association weighting, ordinary and post-change acceptance thresholds, the new-entity anchor gate, the persistent reconnect gate, smoothing, anchor cost scale, nonpersistent penalty scale, and eight joint perturbations.
+
+For each setting, the analysis reports Full-minus-lesion identity-continuity and lure-rejection effects across seed-level means. These metrics are final-probe tracking quantities and are separate from the primary composite $Q$. The per-setting confidence intervals are pointwise descriptive 95\% intervals using 10,000 nonparametric bootstrap resamples of paired seed effects. A setting is counted as pointwise preserved when both effects have the expected sign, both pointwise intervals are above zero, and both effects have the expected direction in at least three of four profiles. Twenty-five of 27 settings (92.6\%) satisfied all three criteria. To address multiplicity, a second max-bootstrap resamples the 30 held-out seeds jointly across all settings and both metrics for 20,000 replicates. For each replicate it records the maximum absolute centered deviation among all 54 effects; the 95th percentile defines a family-wise simultaneous interval. Twenty-four of 27 settings (88.9\%) retained positive simultaneous lower bounds for both primary effects. \texttt{joint\_04}, whose identity effect had a positive pointwise lower bound, crossed zero only under this simultaneous correction. The median identity advantage was $+0.760$ and median lure-rejection advantage $+0.524$.
+
+Two settings failed the identity criterion while retaining positive lure rejection. Raising only the persistent reconnect gate from 0.70 to 0.77 yielded identity advantage $-0.021$ with 95\% CI $[-0.109,0.057]$. Joint perturbation 03 (ordinary threshold 0.73, post-change threshold 0.81, new-entity gate 0.6275, reconnect gate 0.74375, smoothing scale 1.075, anchor-cost scale 0.78125, nonpersistent-penalty scale 1.21875) reversed the identity effect to $-0.248$ ($[-0.352,-0.149]$) while preserving lure-rejection advantage $+0.333$. These failure regions identify reconnect accessibility as a critical part of the explicit anchor implementation.
+
+The sweep supports a broad local operating basin for the Full-versus-lesion effect within the prespecified neighborhood. Arbitrary parameter combinations remain untested.
+
+\section{Parameter-Provenance Summary}
+\begin{longtable}{@{}p{0.19\textwidth}p{0.19\textwidth}p{0.55\textwidth}@{}}
+\caption{Scientific status and provenance of the numerical values.}\label{tab:provenance}\\
+\toprule
+Parameter family & Provenance class & Interpretation \\
+\midrule
+\endfirsthead
+\toprule
+Parameter family & Provenance class & Interpretation \\
+\midrule
+\endhead
+Association weights/thresholds & Hand-designed implementation & Chosen during exploratory engineering to make ordinary continuity and post-change causal matching behave differently; locked before confirmation. \\
+Smoothing/interpolation rates & Hand-designed implementation & Stability/adaptation trade-off; engineering choice; no biological time-series fit was performed. \\
+Role-energy coefficients & Hand-designed discriminant scores & Encode qualitative role archetypes and relative cue priorities; uncalibrated discriminant-score coefficients. \\
+Anchor weights/gates/costs & Hand-designed identity mechanism & Implement the hypothesis that body-internal causal closure can transfer lineage across discontinuity; exact decimals have no claim to universality. \\
+Endpoint weights/scales & Prespecified evaluation design & Chosen after a diagnostic ceiling to measure multiple failure modes continuously; frozen before confirmatory seeds were opened. \\
+Confirmatory effect thresholds & Prespecified scientific decision rule & Define a practically meaningful success gate and nondegeneracy requirement; evaluation thresholds excluded from the ontology mechanism. \\
+Held-out effect estimates and CIs & Empirical results & The quantities actually estimated from untouched confirmatory data. These are the inferential outputs of the held-out analysis. \\
+\bottomrule
+\end{longtable}
+
+\enlargethispage{4\baselineskip}
+\section{Reproducibility}
+The public repository contains a complete reference execution and clean rerun workspace. The canonical ontology source is \texttt{frozen\_code/ontology\_core.gd}, SHA-256
+\begin{center}
+\small\texttt{b81f43221b290fc09c06c69719a24533}\\
+\texttt{cdd802fe483347301d6015adda9eb38c}.
+\end{center}
+The recorded reference execution used Godot 4.7 stable and Python 3.13.14. Primary confirmatory seeds are 277--306, independent-estimator held-out seeds 331--360, and parameter-sensitivity held-out seeds 361--390. The two added held-out ranges are disjoint from each other and from the original confirmation. Raw streams, run-level metrics, diagnostic model fit, all 27 sensitivity settings including failures, access markers, and SHA-256 manifests are retained under \texttt{reference\_results/}.
+
+The preceding Zenodo DOI \href{https://doi.org/10.5281/zenodo.22207678}{10.5281/zenodo.22207678} identifies the earlier confirmatory snapshot. The complete rerun is prepared for a new immutable Zenodo version; the token \texttt{ZENODO-CURRENT-RELEASE-DOI} is replaced by the assigned version DOI before final submission.
+
+\end{document}

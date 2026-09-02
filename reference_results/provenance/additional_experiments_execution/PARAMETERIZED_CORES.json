@@ -1,0 +1,735 @@
+{
+  "central_source_sha256": "b81f43221b290fc09c06c69719a24533cdd802fe483347301d6015adda9eb38c",
+  "identity_metadata": "provenance/FROZEN_CORE_IDENTITY.json",
+  "generated": [
+    {
+      "parameter_id": "3eabbd67d74e6d77",
+      "label": "central",
+      "script": "ontology_core_3eabbd67d74e6d77.gd",
+      "sha256": "b81f43221b290fc09c06c69719a24533cdd802fe483347301d6015adda9eb38c",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "central",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "3eabbd67d74e6d77",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "06377b5b0d8e7e68",
+      "label": "ordinary_causal_weight_x0.8",
+      "script": "ontology_core_06377b5b0d8e7e68.gd",
+      "sha256": "04f2a238e93b0f0e8686caa81a4af6c71cfb4c192bdc263f74c8fea7f677bee6",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "ordinary_causal_weight_x0.8",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.4479166666666667,
+          0.3854166666666667,
+          0.1666666666666667
+        ],
+        "parameter_id": "06377b5b0d8e7e68",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "b620e4ea0509f59a",
+      "label": "ordinary_causal_weight_x1.2",
+      "script": "ontology_core_b620e4ea0509f59a.gd",
+      "sha256": "01e87abf549f3898cb28b1d7f3b1cdbcd67ac26a0b5edd7cab42b6449109f4de",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "ordinary_causal_weight_x1.2",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.41346153846153844,
+          0.3557692307692307,
+          0.23076923076923075
+        ],
+        "parameter_id": "b620e4ea0509f59a",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "37159ae9f042ee5e",
+      "label": "postchange_causal_weight_x0.8",
+      "script": "ontology_core_37159ae9f042ee5e.gd",
+      "sha256": "73475f1024d900471eed1a2c6c96487f0ea6542bcdb230a4cc377ef6a39a5af9",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "postchange_causal_weight_x0.8",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "37159ae9f042ee5e",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.22271714922049,
+          0.32293986636971045,
+          0.4543429844097996
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "791fedb7310df556",
+      "label": "postchange_causal_weight_x1.2",
+      "script": "ontology_core_791fedb7310df556.gd",
+      "sha256": "1fa9108086f7b1acc4a82d4462e4f4f0c28f7490b6626baca48ab7fe5660621b",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "postchange_causal_weight_x1.2",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "791fedb7310df556",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.1814882032667877,
+          0.26315789473684215,
+          0.5553539019963702
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "57a949ee869f33f6",
+      "label": "ordinary_threshold_0.58",
+      "script": "ontology_core_57a949ee869f33f6.gd",
+      "sha256": "495ef9337423c65658e43883e8c953e4eb85e465b1fba651fb2ae460970e85b3",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "ordinary_threshold_0.58",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.58,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "57a949ee869f33f6",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "32e352ff48345d00",
+      "label": "ordinary_threshold_0.74",
+      "script": "ontology_core_32e352ff48345d00.gd",
+      "sha256": "692958045ac3908e0a14d4a2c2ecf8804cf964719a0118ccd2de5ccae275e67f",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "ordinary_threshold_0.74",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.74,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "32e352ff48345d00",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "79b88271409cebee",
+      "label": "postchange_threshold_0.74",
+      "script": "ontology_core_79b88271409cebee.gd",
+      "sha256": "14081bc535d3384403f511f482504f23b146c765c9f494fbee406d8d74c60c1d",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "postchange_threshold_0.74",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "79b88271409cebee",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.74,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "dc6413addc7317d8",
+      "label": "postchange_threshold_0.9",
+      "script": "ontology_core_dc6413addc7317d8.gd",
+      "sha256": "0f059a639a5c42c16d9f896673a84898adeea605ca9d392815979daa7df1e49b",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "postchange_threshold_0.9",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "dc6413addc7317d8",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.9,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "a43a193a7b0fd727",
+      "label": "new_entity_anchor_gate_0.56",
+      "script": "ontology_core_a43a193a7b0fd727.gd",
+      "sha256": "bbb9d6f01c5fc363fb926801f2b532e9065bb1e8a4ee0c5ee91550b4b8612653",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "new_entity_anchor_gate_0.56",
+        "new_entity_anchor_gate": 0.56,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "a43a193a7b0fd727",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "68359943c3561cbb",
+      "label": "new_entity_anchor_gate_0.68",
+      "script": "ontology_core_68359943c3561cbb.gd",
+      "sha256": "2b58592e85c991a75049096fc0c290f7fa337e9e2d8d537d9b119983dbf439c2",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "new_entity_anchor_gate_0.68",
+        "new_entity_anchor_gate": 0.68,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "68359943c3561cbb",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "1537795a9efbba4d",
+      "label": "persistent_reconnect_gate_0.63",
+      "script": "ontology_core_1537795a9efbba4d.gd",
+      "sha256": "b730d13152980d31f5c07a38c33f1782e3057d523b7a658dac04d0121b8020b5",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "persistent_reconnect_gate_0.63",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "1537795a9efbba4d",
+        "persistent_reconnect_gate": 0.63,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "b292cd026c2bcaca",
+      "label": "persistent_reconnect_gate_0.77",
+      "script": "ontology_core_b292cd026c2bcaca.gd",
+      "sha256": "024288207adc7e2ef300055fbef3afe6ff8f5ff9c5c75fe3f63f6249925bbfbd",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "persistent_reconnect_gate_0.77",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "b292cd026c2bcaca",
+        "persistent_reconnect_gate": 0.77,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "18f6751c74e63d37",
+      "label": "smoothing_scale_0.8",
+      "script": "ontology_core_18f6751c74e63d37.gd",
+      "sha256": "e9a0296d36242560ea36c36e49df7eaac734c9dfd2a343e75f5c32255295b210",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "smoothing_scale_0.8",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "18f6751c74e63d37",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 0.8
+      }
+    },
+    {
+      "parameter_id": "506c41c4393d2a3e",
+      "label": "smoothing_scale_1.2",
+      "script": "ontology_core_506c41c4393d2a3e.gd",
+      "sha256": "51772a0dbf572bc4f7e7167d02f958842aaaa9df57a161a57ad49c7b740b453e",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "smoothing_scale_1.2",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "506c41c4393d2a3e",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.2
+      }
+    },
+    {
+      "parameter_id": "6aad5aa919183355",
+      "label": "anchor_cost_scale_0.75",
+      "script": "ontology_core_6aad5aa919183355.gd",
+      "sha256": "844ec1c8843c8f69f39d0fb6547622793691869383ffcfbabd8f39dfc3942bbd",
+      "parameters": {
+        "anchor_cost_scale": 0.75,
+        "label": "anchor_cost_scale_0.75",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "6aad5aa919183355",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "8700f90f93a168db",
+      "label": "anchor_cost_scale_1.25",
+      "script": "ontology_core_8700f90f93a168db.gd",
+      "sha256": "5bb15296c29583d218feffffcdc5f237c6934ca59abbaac15aab5bb1dd1458f9",
+      "parameters": {
+        "anchor_cost_scale": 1.25,
+        "label": "anchor_cost_scale_1.25",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.0,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "8700f90f93a168db",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "6cfc23006526029e",
+      "label": "nonpersistent_penalty_scale_0.75",
+      "script": "ontology_core_6cfc23006526029e.gd",
+      "sha256": "8f65c6ecc9805e5859fa7cdc9443ffa27ebfc44e334d874e0544dd68c0acaec7",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "nonpersistent_penalty_scale_0.75",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 0.75,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "6cfc23006526029e",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "49336dcd6baab892",
+      "label": "nonpersistent_penalty_scale_1.25",
+      "script": "ontology_core_49336dcd6baab892.gd",
+      "sha256": "b4c247f3761c022be2cf2410d24884814eea01e4fc135f1df55aedfc6b5def67",
+      "parameters": {
+        "anchor_cost_scale": 1.0,
+        "label": "nonpersistent_penalty_scale_1.25",
+        "new_entity_anchor_gate": 0.62,
+        "nonpersistent_penalty_scale": 1.25,
+        "ordinary_threshold": 0.66,
+        "ordinary_weights": [
+          0.43,
+          0.37,
+          0.2
+        ],
+        "parameter_id": "49336dcd6baab892",
+        "persistent_reconnect_gate": 0.7,
+        "postchange_threshold": 0.82,
+        "postchange_weights": [
+          0.2,
+          0.29,
+          0.51
+        ],
+        "smoothing_scale": 1.0
+      }
+    },
+    {
+      "parameter_id": "4174679effc60e6c",
+      "label": "joint_00",
+      "script": "ontology_core_4174679effc60e6c.gd",
+      "sha256": "925b4bf1aea1fa4fa24e3228f591fbbbaa1aa883eacd18039da400025a543dc3",
+      "parameters": {
+        "anchor_cost_scale": 1.03125,
+        "label": "joint_00",
+        "new_entity_anchor_gate": 0.6725000000000001,
+        "nonpersistent_penalty_scale": 1.09375,
+        "ordinary_threshold": 0.6499999999999999,
+        "ordinary_weights": [
+          0.40133816987263454,
+          0.39574486472320525,
+          0.20291696540416018
+        ],
+        "parameter_id": "4174679effc60e6c",
+        "persistent_reconnect_gate": 0.67375,
+        "postchange_threshold": 0.75,
+        "postchange_weights": [
+          0.18913993926269493,
+          0.23206670891938624,
+          0.5787933518179189
+        ],
+        "smoothing_scale": 1.125
+      }
+    },
+    {
+      "parameter_id": "cb6d1d701cb584ae",
+      "label": "joint_01",
+      "script": "ontology_core_cb6d1d701cb584ae.gd",
+      "sha256": "4a76830949a96aa64e5ad064bbb201ace4b7cedc736816ff032beb93c36813eb",
+      "parameters": {
+        "anchor_cost_scale": 0.84375,
+        "label": "joint_01",
+        "new_entity_anchor_gate": 0.5825,
+        "nonpersistent_penalty_scale": 0.84375,
+        "ordinary_threshold": 0.69,
+        "ordinary_weights": [
+          0.44022043056892474,
+          0.35028563907861926,
+          0.20949393035245603
+        ],
+        "parameter_id": "cb6d1d701cb584ae",
+        "persistent_reconnect_gate": 0.65625,
+        "postchange_threshold": 0.77,
+        "postchange_weights": [
+          0.16585594845122528,
+          0.26902965398814166,
+          0.5651143975606331
+        ],
+        "smoothing_scale": 1.025
+      }
+    },
+    {
+      "parameter_id": "e9418808cbd7ae60",
+      "label": "joint_02",
+      "script": "ontology_core_e9418808cbd7ae60.gd",
+      "sha256": "06d675e3859c8a13b689180714360fbfe4fc08f4f96942be436cddd59124ba0b",
+      "parameters": {
+        "anchor_cost_scale": 1.09375,
+        "label": "joint_02",
+        "new_entity_anchor_gate": 0.5975,
+        "nonpersistent_penalty_scale": 0.96875,
+        "ordinary_threshold": 0.61,
+        "ordinary_weights": [
+          0.4581077491594209,
+          0.3345409794991184,
+          0.2073512713414608
+        ],
+        "parameter_id": "e9418808cbd7ae60",
+        "persistent_reconnect_gate": 0.7262500000000001,
+        "postchange_threshold": 0.79,
+        "postchange_weights": [
+          0.2089825847494221,
+          0.3006256543642464,
+          0.4903917608863316
+        ],
+        "smoothing_scale": 0.875
+      }
+    },
+    {
+      "parameter_id": "3024ad26066b10e3",
+      "label": "joint_03",
+      "script": "ontology_core_3024ad26066b10e3.gd",
+      "sha256": "b6a229a8a296c9c13215756e0158d92152057ae70a6b5663d2078bde8a858d42",
+      "parameters": {
+        "anchor_cost_scale": 0.78125,
+        "label": "joint_03",
+        "new_entity_anchor_gate": 0.6275000000000001,
+        "nonpersistent_penalty_scale": 1.21875,
+        "ordinary_threshold": 0.73,
+        "ordinary_weights": [
+          0.44548368430859375,
+          0.33026509035536655,
+          0.22425122533603978
+        ],
+        "parameter_id": "3024ad26066b10e3",
+        "persistent_reconnect_gate": 0.74375,
+        "postchange_threshold": 0.81,
+        "postchange_weights": [
+          0.17689716119246202,
+          0.2823439771470675,
+          0.5407588616604705
+        ],
+        "smoothing_scale": 1.075
+      }
+    },
+    {
+      "parameter_id": "ce570ae60775c2b6",
+      "label": "joint_04",
+      "script": "ontology_core_ce570ae60775c2b6.gd",
+      "sha256": "5f529790dc07df74ed579e3b1c3026f3fdb2805b7ada28c4e92fd441aabee332",
+      "parameters": {
+        "anchor_cost_scale": 1.21875,
+        "label": "joint_04",
+        "new_entity_anchor_gate": 0.5675,
+        "nonpersistent_penalty_scale": 0.78125,
+        "ordinary_threshold": 0.59,
+        "ordinary_weights": [
+          0.3555055129257176,
+          0.41231563183459785,
+          0.2321788552396845
+        ],
+        "parameter_id": "ce570ae60775c2b6",
+        "persistent_reconnect_gate": 0.76125,
+        "postchange_threshold": 0.89,
+        "postchange_weights": [
+          0.2054926913378595,
+          0.3214512133956233,
+          0.4730560952665172
+        ],
+        "smoothing_scale": 0.925
+      }
+    },
+    {
+      "parameter_id": "c53a10ada1c2be83",
+      "label": "joint_05",
+      "script": "ontology_core_c53a10ada1c2be83.gd",
+      "sha256": "d3487e0b43f6e2a080d11fa3349eec782176b0bfd3d6577427970e359318fff6",
+      "parameters": {
+        "anchor_cost_scale": 0.96875,
+        "label": "joint_05",
+        "new_entity_anchor_gate": 0.6425000000000001,
+        "nonpersistent_penalty_scale": 1.03125,
+        "ordinary_threshold": 0.71,
+        "ordinary_weights": [
+          0.47186242870728495,
+          0.32607951157706355,
+          0.20205805971565152
+        ],
+        "parameter_id": "c53a10ada1c2be83",
+        "persistent_reconnect_gate": 0.69125,
+        "postchange_threshold": 0.8300000000000001,
+        "postchange_weights": [
+          0.2144188797532882,
+          0.30601780387877364,
+          0.47956331636793814
+        ],
+        "smoothing_scale": 0.975
+      }
+    },
+    {
+      "parameter_id": "1b191122bf204abf",
+      "label": "joint_06",
+      "script": "ontology_core_1b191122bf204abf.gd",
+      "sha256": "dc2b96b1cf06e23a758af15546e887fa2e90af9cadf9c98a397f6114e46560d2",
+      "parameters": {
+        "anchor_cost_scale": 0.90625,
+        "label": "joint_06",
+        "new_entity_anchor_gate": 0.6125,
+        "nonpersistent_penalty_scale": 1.15625,
+        "ordinary_threshold": 0.63,
+        "ordinary_weights": [
+          0.4252304815150034,
+          0.3651478774088558,
+          0.20962164107614084
+        ],
+        "parameter_id": "1b191122bf204abf",
+        "persistent_reconnect_gate": 0.70875,
+        "postchange_threshold": 0.87,
+        "postchange_weights": [
+          0.20824886207059543,
+          0.2602169196402157,
+          0.5315342182891889
+        ],
+        "smoothing_scale": 1.1749999999999998
+      }
+    },
+    {
+      "parameter_id": "f740ac6001868916",
+      "label": "joint_07",
+      "script": "ontology_core_f740ac6001868916.gd",
+      "sha256": "1b744b233d037533bf4ebec08baa78dd7edbf7ebcd93eb8fc8bf75e52708395f",
+      "parameters": {
+        "anchor_cost_scale": 1.15625,
+        "label": "joint_07",
+        "new_entity_anchor_gate": 0.6575000000000001,
+        "nonpersistent_penalty_scale": 0.90625,
+        "ordinary_threshold": 0.6699999999999999,
+        "ordinary_weights": [
+          0.39496027709365816,
+          0.3839453948122866,
+          0.22109432809405513
+        ],
+        "parameter_id": "f740ac6001868916",
+        "persistent_reconnect_gate": 0.63875,
+        "postchange_threshold": 0.85,
+        "postchange_weights": [
+          0.2274932882442102,
+          0.28093087665497346,
+          0.49157583510081637
+        ],
+        "smoothing_scale": 0.8250000000000001
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+condition,identity_continuity_score_v2,identity_continuity_score_legacy,final_identity_retention,final_identity_recovery_latency,final_recovery_observed,final_old_signature_clone_capture,final_identity_switches,final_self_posterior_margin,final_identity_fragmentation,whole_run_self_fragmentation,stage_identity_chain_score,training_transition_lure_error,training_transition_recovery_latency,initial_identity_retained_at_end,final_self_role_accuracy
+progressive_history_reset,0.8759682504864044,0.933746092674715,0.9418402777777775,0.3125,1.0,0.05989583333333312,1.0625,0.3525335347160994,1.1875,4.1875,0.0,0.0,4.2,0.0,1.0
+progressive_no_persistent_self,0.46778749982548123,0.3125,0.3125,4.57875,0.3125,0.6875,0.0,0.3461458318790037,1.0,2.0,0.0,1.0,4.2,0.6875,1.0
+progressive_persistent,0.8977206947976856,0.9653025766595256,0.9635416666666663,0.14375,1.0,0.02734375,0.6875,0.3538607553445219,1.125,2.0,1.0,0.1635416666666656,0.25833333333333375,1.0,1.0

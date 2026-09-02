@@ -1,0 +1,16 @@
+.venv-experiments/
+__pycache__/
+.pytest_cache/
+*.pyc
+experiments/*/godot/.godot/
+experiments/*/godot/runtime/*.gd
+experiments/*/godot/work/*.json
+experiments/*/work/
+# Scientific generated results and execution provenance are intentionally NOT ignored.
+paper/**/*.aux
+paper/**/*.bbl
+paper/**/*.blg
+paper/**/*.log
+paper/**/*.out
+paper/**/*.fls
+paper/**/*.fdb_latexmk

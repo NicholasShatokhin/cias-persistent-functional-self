@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE",
+  "completed_utc": "2026-09-01T21:51:58Z",
+  "godot_version": "4.7.stable.official.5b4e0cb0f",
+  "python_version": "3.13.14",
+  "core_sha256": "b81f43221b290fc09c06c69719a24533cdd802fe483347301d6015adda9eb38c",
+  "paper_confirmatory": "277-306",
+  "independent_estimator_heldout": "331-360",
+  "parameter_sensitivity_heldout": "361-390"
+}

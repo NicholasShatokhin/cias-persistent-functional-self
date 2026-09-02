@@ -1,0 +1,25 @@
+{
+  "primary_baseline": "generic_recurrent_filter",
+  "sanity_baseline": "appearance_only",
+  "fit_split": "diagnostic seeds 315-326 only",
+  "test_splits": [
+    "preflight 327-330",
+    "heldout 331-360"
+  ],
+  "probe_start_frame": 168,
+  "recovery_consecutive_frames": 5,
+  "generic_filter": {
+    "position_scale": 190.0,
+    "motion_weight": 0.55,
+    "appearance_continuity_weight": 0.25,
+    "emission_weight": 1.0,
+    "state_update_alpha": 0.2,
+    "variance_floor": 0.01
+  },
+  "forbidden_test_inputs": [
+    "is_true_lineage",
+    "is_lure",
+    "truth_entity_id",
+    "ground_truth_role"
+  ]
+}
